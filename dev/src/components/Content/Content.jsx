@@ -44,7 +44,7 @@ const Image = styled.div`
 const Content = ({main, sub}) => {
 
   const currentMain = NAV_ITEMS.find(item => item.key === main) || {};
-  const current = currentMain.submenu && currentMain.submenu.length && currentMain.submenu.find(item => sub === item.key) || {};
+  const current = currentMain.submenu && currentMain.submenu.length ? currentMain.submenu.find(item => sub === item.key) : {};
   const renderContent = () => current.component || currentMain.component || <>no comp</>
   const subtitle = current.value ? ` - ${current.value}` : '';
 

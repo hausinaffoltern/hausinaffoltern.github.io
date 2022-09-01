@@ -2,7 +2,7 @@ import React from 'react';
 import bg from '../../assets/bg.jpg'
 import Overview from '../Pages/Overview';
 
-export default [
+const navItems = [
     {
       key: 'haus',
       value: 'Das Haus',
@@ -77,3 +77,5 @@ export default [
       component: <>Kontakt</>,
     },
   ];
+
+  export default navItems;

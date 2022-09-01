@@ -26,17 +26,14 @@ const InnerContainer = styled.div`
 `;
 
 class App extends PureComponent {
-  constructor() {
-    super();
-  }
 
   addRoutes = () => {
     return NAV_ITEMS.map(main => {
-      return main.submenu && 
+      return main.submenu ? 
         main.submenu.map(sub => {
           return <Route key={`${main.key}/${sub.key}`} path={`${main.key}/${sub.key}`} element={<Content main={main.key} sub={sub.key}/>} />
         })
-      || <Route key={main.key} path={main.key} element={<Content main={main.key} />} />
+      : <Route key={main.key} path={main.key} element={<Content main={main.key} />} />
     })
   }
 
