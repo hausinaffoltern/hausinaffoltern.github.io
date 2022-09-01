@@ -119,14 +119,14 @@ const Home = () => {
               <BsPiggyBank />
             </FactImage>
             <h3>Verkaufspreis</h3>
-            <p>CHF 1'480'000.-</p>
+            <p>Preis auf Anfrage</p>
           </Fact>
           <Fact>
           <FactImage>
               <HiOutlineCalendar />
             </FactImage>
             <h3>Verfügbar ab</h3>
-            <p>11.2022</p>
+            <p>November 2022</p>
           </Fact>
 
           <Fact>
