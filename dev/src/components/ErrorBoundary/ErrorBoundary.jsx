@@ -1,5 +1,4 @@
 import React from 'react';
-import { info } from 'qno-console';
 import ErrorRenderer from './ErrorRenderer';
 
 export default class ErrorBoundary extends React.Component {
@@ -11,7 +10,7 @@ export default class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     // Display fallback UI
     this.setState({ hasError: true });
-    info(errorInfo);
+    console.info(errorInfo);
     // You can also log the error to an error reporting service
     //logErrorToMyService(error, info);
   }
