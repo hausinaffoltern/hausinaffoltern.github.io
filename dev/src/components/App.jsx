@@ -10,6 +10,7 @@ import Content from './Content';
 import ErrorRenderer from './ErrorBoundary/ErrorRenderer';
 import styled from 'styled-components';
 import NAV_ITEMS from './common/Sitemap';
+import Footer from "./Footer";
 
 const MainContainer = styled.div`
   justify-content: center;
@@ -48,6 +49,7 @@ class App extends PureComponent {
               {this.addRoutes()}
               <Route path="error" element={<ErrorRenderer />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </InnerContainer>
       </MainContainer>

@@ -1,12 +1,14 @@
 import React from 'react';
 import bg from '../../assets/bg.jpg'
 import Overview from '../Pages/Overview';
+import Kontakt from '../Pages/Kontakt';
+import Photos from '../Pages/Photos';
 
 const navItems = [
     {
       key: 'haus',
       value: 'Das Haus',
-      component: <>HAUS</>,
+      component: <p>HAUS</p>,
       submenu: [
         {
           key: 'beschreibung',
@@ -26,7 +28,7 @@ const navItems = [
     {
       key: 'zimmer',
       value: 'Räume',
-      component: <>Räume</>,
+      component: <p>Räume</p>,
       submenu: [
         {
           key: 'eg',
@@ -49,7 +51,7 @@ const navItems = [
     {
       key: 'umgebung',
       value: 'Umgebung',
-      component: <>Umgebung</>,
+      component: <p>Umgebung</p>,
       submenu: [
         {
           key: 'lage',
@@ -68,13 +70,13 @@ const navItems = [
     {
       key: 'gallery',
       value: 'Impressionen',
-      component: <>Impressionen</>,
+      component: <Photos />,
     },
     {
       key: 'kontakt',
       value: 'Kontakt',
       image: bg,
-      component: <>Kontakt</>,
+      component: <Kontakt />
     },
   ];
 

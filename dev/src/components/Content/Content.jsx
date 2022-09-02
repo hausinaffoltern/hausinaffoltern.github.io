@@ -8,9 +8,6 @@ const Container = styled.div`
   h2 {
     padding: 0 20px;
   }
-  p {
-    padding: 0 20px;
-  }
 `;
 
 const ContentContainer = styled.div`

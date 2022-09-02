@@ -1,20 +1,20 @@
 {
-  "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.8b0deab3.js",
-    "static/js/787.e3f9b5a8.chunk.js": "/static/js/787.e3f9b5a8.chunk.js",
-    "static/media/bg.jpg": "/static/media/bg.4cf0ca3a468887f6e0ea.jpg",
-    "static/media/excavator.svg": "/static/media/excavator.6b34a1425008a12b33962a48cd3eceed.svg",
-    "static/media/land.svg": "/static/media/land.0e2442b4a7a460f97c48ab0b1b39e8ff.svg",
-    "index.html": "/index.html",
-    "static/media/floorplan.svg": "/static/media/floorplan.1d53cb4d14e050147714180a5ae9f69e.svg",
-    "static/media/ErrorRenderer.less": "/static/media/ErrorRenderer.85c25d5d50dadfe4fc27.less",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.8b0deab3.js.map": "/static/js/main.8b0deab3.js.map",
-    "787.e3f9b5a8.chunk.js.map": "/static/js/787.e3f9b5a8.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.8b0deab3.js"
-  ]
+  "main.css": "/static/css/main.d1af3ca5.chunk.css",
+  "main.js": "/static/js/main.47993fce.chunk.js",
+  "main.js.map": "/static/js/main.47993fce.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.16c55471.js",
+  "runtime~main.js.map": "/static/js/runtime~main.16c55471.js.map",
+  "static/js/2.281b52f4.chunk.js": "/static/js/2.281b52f4.chunk.js",
+  "static/js/2.281b52f4.chunk.js.map": "/static/js/2.281b52f4.chunk.js.map",
+  "static/js/3.27459842.chunk.js": "/static/js/3.27459842.chunk.js",
+  "static/js/3.27459842.chunk.js.map": "/static/js/3.27459842.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.f7e98fdee89ae718cfd61a6623bf4c13.js": "/precache-manifest.f7e98fdee89ae718cfd61a6623bf4c13.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.d1af3ca5.chunk.css.map": "/static/css/main.d1af3ca5.chunk.css.map",
+  "static/media/ErrorRenderer.less": "/static/media/ErrorRenderer.85b0930f.less",
+  "static/media/bg.jpg": "/static/media/bg.6932f360.jpg",
+  "static/media/excavator.svg": "/static/media/excavator.3a5a5781.svg",
+  "static/media/floorplan.svg": "/static/media/floorplan.665fcc5a.svg",
+  "static/media/land.svg": "/static/media/land.4f7fb51b.svg"
 }
