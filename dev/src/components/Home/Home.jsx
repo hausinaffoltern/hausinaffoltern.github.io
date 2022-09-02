@@ -11,6 +11,7 @@ import Land from "../../assets/land.svg";
 
 const Content = styled.div`
   background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
   h2 {
     padding: 0 20px;
   }

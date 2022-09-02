@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const BottomContainer = styled.div`
   text-align: center;
-  background: #f5f5f5;  
   a {
     color: #9a9;
     text-decoration: none;

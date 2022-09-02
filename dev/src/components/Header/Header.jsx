@@ -7,7 +7,6 @@ const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f5f5f5;  
 `;
 
 const Navigation = styled.ul`
