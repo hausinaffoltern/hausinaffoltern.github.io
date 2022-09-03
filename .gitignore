@@ -7,8 +7,8 @@
 .pnp.js
 yarn.lock
 package-lock.json
-/dev/yarn.lock
-/dev/package-lock.json
+dev/yarn.lock
+dev/package-lock.json
 
 # testing
 /coverage

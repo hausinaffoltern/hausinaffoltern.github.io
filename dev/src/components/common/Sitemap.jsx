@@ -1,8 +1,12 @@
 import React from 'react';
 import bg from '../../assets/bg.jpg'
+import video from '../../assets/video.mp4'
 import Overview from '../Pages/Overview';
 import Kontakt from '../Pages/Kontakt';
 import Photos from '../Pages/Photos';
+import Lage from '../Pages/Lage';
+import Gemeinde from '../Pages/Gemeinde';
+import Infrastruktur from '../Pages/Infrastruktur';
 
 const navItems = [
     {
@@ -29,6 +33,7 @@ const navItems = [
       key: 'zimmer',
       value: 'Räume',
       component: <p>Räume</p>,
+      video: video,
       submenu: [
         {
           key: 'eg',
@@ -52,18 +57,22 @@ const navItems = [
       key: 'umgebung',
       value: 'Umgebung',
       component: <p>Umgebung</p>,
+      video: video,
       submenu: [
         {
           key: 'lage',
           value: 'Lage',
+          component: <Lage />,
         },
         {
           key: 'gemeinde',
           value: 'Gemeinde',
+          component: <Gemeinde />,
         },
         {
           key: 'infrastruktur',
           value: 'Infrasturktur',
+          component: <Infrastruktur />,
         },
       ]
     },

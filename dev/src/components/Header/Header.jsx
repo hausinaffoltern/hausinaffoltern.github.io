@@ -70,14 +70,20 @@ const NavItem = styled.li`
 
 const SubNavigation = styled.ul`
   display: none;
-  background: #f5f5f5;
+  background: #fff;
   text-align: left;
   list-style: none;
   margin: 0;
-  padding: 10px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 0;
   position: absolute;
+  z-index: 2000;
   text-align: center;
   & li {
+    border-bottom: 4px solid #fff;
+    &:last-child {
+      border-bottom: none;
+    }
     padding: 0;
     a {
         line-height: 20px; 

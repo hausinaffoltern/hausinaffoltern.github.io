@@ -31,6 +31,34 @@ const LeftNav = styled.ul`
   }
 `;
 
+const VideoContainer = styled.div`
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(220,220,200,.7);
+    z-index: 1001;
+  }
+`;
+
+const Video = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url(${props => props.bg});
+  background-size: content;
+  background-position: 0 70%;
+  background-repeat: no-repeat;
+  z-index: 1000;
+`;
+
 const Image = styled.div`
   height: 400px;
   background-image: url(${props => props.bg});
@@ -48,6 +76,7 @@ const Content = ({main, sub}) => {
 
   return (
     <Container>
+      {currentMain.video && <VideoContainer><Video autoPlay loop muted poster="images/poster.jpg"><source width="100%" src={currentMain.video} type="video/mp4" /></Video></VideoContainer>}
       {currentMain.image && <Image bg={currentMain.image} />}
       <h2>{currentMain.value} {subtitle}</h2>
       <ContentContainer>
