@@ -1,6 +1,7 @@
 import React from 'react';
 import bg from '../../assets/bg.jpg'
-import video from '../../assets/video.mp4'
+import home from '../../assets/home.jpg'
+import lage from '../../assets/lage.mp4'
 import Overview from '../Pages/Overview';
 import Kontakt from '../Pages/Kontakt';
 import Photos from '../Pages/Photos';
@@ -33,7 +34,7 @@ const navItems = [
       key: 'zimmer',
       value: 'Räume',
       component: <p>Räume</p>,
-      video: video,
+      //video: rooms,
       submenu: [
         {
           key: 'eg',
@@ -57,7 +58,7 @@ const navItems = [
       key: 'umgebung',
       value: 'Umgebung',
       component: <p>Umgebung</p>,
-      video: video,
+      video: lage,
       submenu: [
         {
           key: 'lage',

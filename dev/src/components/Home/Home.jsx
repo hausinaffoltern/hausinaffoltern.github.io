@@ -1,5 +1,6 @@
 import React from 'react';
-import bg from '../../assets/bg.jpg'
+import home from '../../assets/home.jpg'
+// import homevideo from '../../assets/homevideo.mp4'
 import styled from 'styled-components';
 import { HiOutlineCalendar } from "react-icons/hi";
 import { MdOutlinePlace } from "react-icons/md";
@@ -22,10 +23,36 @@ const Content = styled.div`
 
 const Image = styled.div`
   height: 400px;
-  background-image: url(${bg});
-  background-size: content;
-  background-position: 0 70%;
+  background-image: url(${home});
+  background-size: 110%;
+  background-position: center top;
   background-repeat: no-repeat;
+  margin: 10px;
+`;
+
+const VideoContainer = styled.div`
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(200,200,200,.6);
+    z-index: 1001;
+  }
+`;
+
+const Video = styled.video`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
 `;
 
 const FloorPlan = styled.div`
@@ -97,6 +124,7 @@ const Home = () => {
   return (
     <>
       <Content>
+        {/*<VideoContainer><Video autoPlay loop muted><source poster={home} src={homevideo} type="video/mp4" /></Video></VideoContainer>*/}
         <Image />
         <h2>Rheienmittelhaus in die glückliche Erlenweg - Affoltern a. A.</h2>
         <p>Lorem ipsum</p>

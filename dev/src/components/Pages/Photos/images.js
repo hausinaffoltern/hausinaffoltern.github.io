@@ -1,97 +1,235 @@
+
+import i01 from '../../../assets/gallery/01_wz.jpg';
+import i02 from '../../../assets/gallery/02_wz.jpg';
+import i03 from '../../../assets/gallery/03_wz.jpg';
+import i04 from '../../../assets/gallery/04_kh.jpg';
+import i05 from '../../../assets/gallery/05_kh.jpg';
+import i06 from '../../../assets/gallery/06_kh.jpg';
+import i07 from '../../../assets/gallery/07_kh.jpg';
+import i08 from '../../../assets/gallery/08_vp.jpg';
+import i09 from '../../../assets/gallery/09_wc.jpg';
+import i10 from '../../../assets/gallery/10_eg.jpg';
+import i11 from '../../../assets/gallery/11_kh.jpg';
+import i12 from '../../../assets/gallery/12_eg.jpg';
+import i13 from '../../../assets/gallery/13_tr.jpg';
+import i14 from '../../../assets/gallery/14_wz.jpg';
+import i15 from '../../../assets/gallery/15_dw.jpg';
+import i16 from '../../../assets/gallery/16_dw.jpg';
+import i17 from '../../../assets/gallery/17_dw.jpg';
+import i18 from '../../../assets/gallery/18_dw.jpg';
+import i19 from '../../../assets/gallery/19_db.jpg';
+import i20 from '../../../assets/gallery/20_db.jpg';
+import i21 from '../../../assets/gallery/21_ds.jpg';
+import i22 from '../../../assets/gallery/22_ds.jpg';
+import i23 from '../../../assets/gallery/23_ds.jpg';
+import i24 from '../../../assets/gallery/24_ds.jpg';
+import i25 from '../../../assets/gallery/25_dg.jpg';
+import i26 from '../../../assets/gallery/26_dg.jpg';
+import i27 from '../../../assets/gallery/27_hg.jpg';
+import i28 from '../../../assets/gallery/28_hg.jpg';
+
+/*
+
+const i01 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/01_wz.jpg'));
+const i02 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/02_wz.jpg'));
+const i03 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/03_wz.jpg'));
+const i04 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/04_kh.jpg'));
+const i05 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/05_kh.jpg'));
+const i06 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/06_kh.jpg'));
+const i07 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/07_kh.jpg'));
+const i08 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/08_vp.jpg'));
+const i09 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/09_wc.jpg'));
+const i10 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/10_eg.jpg'));
+const i11 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/11_kh.jpg'));
+const i12 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/12_eg.jpg'));
+const i13 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/13_tr.jpg'));
+const i14 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/14_wz.jpg'));
+const i15 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/15_dw.jpg'));
+const i16 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/16_dw.jpg'));
+const i17 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/17_dw.jpg'));
+const i18 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/18_dw.jpg'));
+const i19 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/19_db.jpg'));
+const i20 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/20_db.jpg'));
+const i21 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/21_ds.jpg'));
+const i22 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/22_ds.jpg'));
+const i23 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/23_ds.jpg'));
+const i24 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/24_ds.jpg'));
+const i25 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/25_dg.jpg'));
+const i26 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/26_dg.jpg'));
+const i27 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/27_hg.jpg'));
+const i28 = React.lazy(() => import( webpackChunkName: 'images'  '../../../assets/gallery/28_hg.jpg'));
+
+*/
+
+
 const images = [
     {
-      src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+      src: i01,
       width: 4,
       height: 3,
-      title: 'Hello',
+      title: 'Wohnzimmer',
     },
     {
-      src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-      width: 1,
-      height: 1,
-      title: 'Hello2',
-    },
-    {
-      src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-      width: 4,
-      height: 3
-    },
-    {
-      src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/PpOHJezOalU/800x599",
-      width: 4,
-      height: 3
-    },
-    {
-      src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
-      width: 4,
-      height: 3
-    },
-    {
-      src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+      src: i02,
       width: 4,
       height: 3,
-      title: 'Hello',
+      title: 'Wohnzimmer',
     },
     {
-      src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
-      width: 1,
-      height: 1,
-      title: 'Hello2',
-    },
-    {
-      src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
-      width: 3,
-      height: 4
-    },
-    {
-      src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+      src: i03,
       width: 4,
-      height: 3
+      height: 3,
+      title: 'Wohnzimmer',
     },
     {
-      src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+      src: i04,
+      width: 4,
+      height: 3,
+      title: 'Küche + Essen',
+    },
+    {
+      src: i05,
+      width: 4,
+      height: 3,
+      title: 'Küche + Essen',
+    },
+    {
+      src: i06,
       width: 3,
-      height: 4
+      height: 4,
+      title: 'Küche',
     },
     {
-      src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+      src: i07,
       width: 4,
-      height: 3
+      height: 3,
+      title: 'Küche',
     },
     {
-      src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+      src: i08,
+      width: 3,
+      height: 4,
+      title: 'Vorplatz',
+    },
+    {
+      src: i09,
+      width: 3,
+      height: 4,
+      title: 'Gäste WC',
+    },
+    {
+      src: i10,
       width: 4,
-      height: 3
+      height: 3,
+      title: 'Erdgeschoss',
+    },
+    {
+      src: i11,
+      width: 4,
+      height: 3,
+      title: 'Küche + Essen',
+    },
+    {
+      src: i12,
+      width: 4,
+      height: 3,
+      title: 'Erdgeschoss',
+    },
+    {
+      src: i13,
+      width: 3,
+      height: 4,
+      title: 'Treppe',
+    },
+    {
+      src: i14,
+      width: 4,
+      height: 3,
+      title: 'Wohnzimmer',
+    },
+    {
+      src: i15,
+      width: 4,
+      height: 3,
+      title: 'Dachwohnzimmer',
+    },
+    {
+      src: i16,
+      width: 4,
+      height: 3,
+      title: 'Dachwohnzimmer',
+    },
+    {
+      src: i17,
+      width: 4,
+      height: 3,
+      title: 'Dachwohnzimmer',
+    },
+    {
+      src: i18,
+      width: 4,
+      height: 3,
+      title: 'Dachwohnzimmer',
+    },
+    {
+      src: i19,
+      width: 3,
+      height: 4,
+      title: 'Dachbadezimmer',
+    },
+    {
+      src: i20,
+      width: 3,
+      height: 4,
+      title: 'Dachbadezimmer',
+    },
+    {
+      src: i21,
+      width: 3,
+      height: 4,
+      title: 'Dachschlafzimmer',
+    },
+    {
+      src: i22,
+      width: 4,
+      height: 3,
+      title: 'Dachschlafzimmer',
+    },
+    {
+      src: i23,
+      width: 4,
+      height: 3,
+      title: 'Dachschlafzimmer',
+    },
+    {
+      src: i24,
+      width: 4,
+      height: 3,
+      title: 'Dachschlafzimmer',
+    },
+    {
+      src: i25,
+      width: 4,
+      height: 3,
+      title: 'Dachgeschoss',
+    },
+    {
+      src: i26,
+      width: 4,
+      height: 3,
+      title: 'Dachgeschoss',
+    },
+    {
+      src: i27,
+      width: 5,
+      height: 3,
+      title: 'Haus',
+    },
+    {
+      src: i28,
+      width: 4,
+      height: 3,
+      title: 'Haus',
     }
   ];
   
