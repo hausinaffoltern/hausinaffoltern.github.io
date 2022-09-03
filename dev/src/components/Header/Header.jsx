@@ -18,7 +18,8 @@ const Navigation = styled.ul`
 
 const Logo = styled.h1`
   display: flex;
-  margin-right: 38px;
+  margin-right: 28px;
+  margin-left: 10px;
   font-family: 'Caveat', cursive;
   font-size: 48px;
   a {

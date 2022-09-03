@@ -24,10 +24,16 @@ const Content = styled.div`
 const Image = styled.div`
   height: 400px;
   background-image: url(${home});
-  background-size: 110%;
-  background-position: center top;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   margin: 10px;
+  @media (max-width: 1009px) {
+    height: 300px;
+  }
+  @media (max-width: 679px) {
+    height: 200px;
+  }
 `;
 
 const VideoContainer = styled.div`
@@ -55,28 +61,26 @@ const Video = styled.video`
   z-index: 1000;
 `;
 
-const FloorPlan = styled.div`
+const CustomIcon = styled.div`
   width: 44px;
   height: 44px;
   background-color: #9a9;
+  background-repeat: no-repeat;
+`;
+
+const FloorPlan = styled(CustomIcon)`
   -webkit-mask-image: url(${Floor});
   mask-image: url(${Floor});
 `;
 
-const Renovation = styled.div`
-width: 44px;
-height: 44px;
-background-color: #9a9;
--webkit-mask-image: url(${Excavator});
-mask-image: url(${Excavator});
+const Renovation = styled(CustomIcon)`
+  -webkit-mask-image: url(${Excavator});
+  mask-image: url(${Excavator});
 `;
 
-const Fence = styled.div`
-width: 44px;
-height: 44px;
-background-color: #9a9;
--webkit-mask-image: url(${Land});
-mask-image: url(${Land});
+const Fence = styled(CustomIcon)`
+  -webkit-mask-image: url(${Land});
+  mask-image: url(${Land});
 `;
 
 const Facts = styled.div`
@@ -87,9 +91,10 @@ const Facts = styled.div`
 
 const Fact = styled.div`
   flex-grow: 1;
-  position: relative;
+  display: flex;
+  justify-content: left;
   width: calc(33.33% - 84px);
-  padding: 0 0 60px 84px;
+  padding: 0 0 60px 0;
   h3 {
     margin: 0;
     padding: 5px 0;
@@ -101,13 +106,16 @@ const Fact = styled.div`
     padding: 0;
     font-size: 18px;
   }
+  @media (max-width: 1009px) {
+    width: calc(50% - 84px);
+  }
+  @media (max-width: 679px) {
+    width: calc(100% - 84px);
+  }
 `
 
 const FactImage = styled.div`
-  position: absolute;
-  top: 0;
-  left: 10px;
-  width: 44px;
+  width: 104px;
   height: 44px;
   svg {
     width: 100%;
@@ -117,6 +125,8 @@ const FactImage = styled.div`
   background-image: url(${props => props.type});
   background-size: content;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
 `
 
 const Home = () => {
@@ -133,65 +143,83 @@ const Home = () => {
             <FactImage>
               <MdOutlinePlace />
             </FactImage>
+            <div>
             <h3>Addresse</h3>
-            <p>Erlenweg 4, 8910<br />Affoltern am Albis, Schweiz</p>
+            <p>Erlenweg 4, 8910<br />Affoltern am Albis,<br />Schweiz</p>
+            </div>
           </Fact>
           <Fact>
             <FactImage>
               <BsHouse />
             </FactImage>
+            <div>
             <h3>Objektart</h3>
-            <p>Mittelrheienfamilienhaus</p>
+            <p>Reihenfamilienhaus</p>
+            </div>
           </Fact>
           <Fact>
-          <FactImage>
+            <FactImage>
               <BsPiggyBank />
             </FactImage>
+            <div>
             <h3>Verkaufspreis</h3>
             <p>Preis auf Anfrage</p>
+            </div>
           </Fact>
           <Fact>
           <FactImage>
               <HiOutlineCalendar />
             </FactImage>
+            <div>
             <h3>Verfügbar ab</h3>
             <p>November 2022</p>
+            </div>
           </Fact>
 
           <Fact>
           <FactImage>
               <FloorPlan />
             </FactImage>
+            <div>
             <h3>Nettowohnflache</h3>
             <p>150m2 + 18m2 beheizte<br />hobbyraum im keller</p>
+            </div>
           </Fact>
           <Fact>
           <FactImage>
               <BsDoorClosed />
             </FactImage>
+            <div>
             <h3>Zimmer</h3>
             <p>6.5</p>
+            </div>
           </Fact>
           <Fact>
           <FactImage>
               <FiFlag />
             </FactImage>
+            <div>
             <h3>Baujahr</h3>
             <p>1979</p>
+            </div>
           </Fact>
           <Fact>
           <FactImage>
               <Renovation />
             </FactImage>
+            <div>
             <h3>Letzte renovation</h3>
             <p>2016</p>
+            </div>
           </Fact>
           <Fact>
           <FactImage>
               <Fence />
             </FactImage>
+            <div>
             <h3>Grundstückflache</h3>
             <p>205m<sup>2</sup></p>
+            </div>
           </Fact>
         </Facts>
       </Content>
