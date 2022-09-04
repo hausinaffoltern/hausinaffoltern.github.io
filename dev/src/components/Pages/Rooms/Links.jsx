@@ -21,7 +21,7 @@ const Spot = styled.div`
     margin-left: -100%;
     margin-top: -100%;
     border-radius: 45px;
-    background-color: #01a4e9;
+    background-color: #464;
     animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
   }
   
@@ -89,6 +89,11 @@ const Links = ({ level, onClick }) => {
         t: '67%',
         l: '77%',
         nr: 5, //wz2
+      },
+      {
+        t: '7%',
+        l: '42%',
+        nr: 6, //wz2
       }
     ],
     og:[

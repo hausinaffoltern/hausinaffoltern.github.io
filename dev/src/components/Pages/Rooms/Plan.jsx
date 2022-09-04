@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Links from './Links';
 import eg from '../../../assets/rooms/eg.jpg';
-// import ug from '../../../assets/rooms/ug.jpg';
+import ug from '../../../assets/rooms/ug.jpg';
 import dg from '../../../assets/rooms/dg.jpg';
 import og from '../../../assets/rooms/og.jpg';
 import styled from 'styled-components';
@@ -35,6 +35,16 @@ const Plan = ({level, openLightboxOnSlide}) => {
   })
 
   useEffect(() => {
+    function handleOrientationhange() {
+      setVisible(false)
+    }
+    window.addEventListener('orientationchange', handleOrientationhange)
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationhange);
+    };
+  })
+
+  useEffect(() => {
     setVisible(true);
   },[visible])
 
@@ -42,13 +52,13 @@ const Plan = ({level, openLightboxOnSlide}) => {
     return <></>
   };
 
-  const floorPlans = { eg, dg, og };
+  const floorPlans = { eg, dg, og, ug };
 
   return (
     <>
 
       <Floor>
-        <img src={floorPlans[level]} />
+        <img alt={`Geschoss-${level}`}src={floorPlans[level]} />
         <LinksContainer><Links onClick={openLightboxOnSlide} level={level} /></LinksContainer>
       </Floor>
     </>

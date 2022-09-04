@@ -1,9 +1,11 @@
 import React from 'react';
-import bg from '../../assets/bg.jpg'
-import home from '../../assets/home.jpg'
+// import bg from '../../assets/bg.jpg'
+// import home from '../../assets/home.jpg'
+import gemeinde from '../../assets/gemeinde.jpg'
 import kontakt from '../../assets/kontakt.jpg'
-import lage from '../../assets/lage.mp4'
+// import lage from '../../assets/lage.mp4'
 import Overview from '../Pages/Overview';
+import Renovation from '../Pages/Renovation';
 import Kontakt from '../Pages/Kontakt';
 import Photos from '../Pages/Photos';
 import Lage from '../Pages/Lage';
@@ -14,6 +16,7 @@ import Eg from '../Pages/Rooms/Eg';
 import Ug from '../Pages/Rooms/Ug';
 import Dg from '../Pages/Rooms/Dg';
 import Og from '../Pages/Rooms/Og';
+import Facts from '../Pages/Facts';
 
 const navItems = [
     {
@@ -27,8 +30,16 @@ const navItems = [
           component: <Overview />,
         },
         {
+          key: 'renovierungen',
+          value: 'Renovierungen',
+          shortvalue: 'Sanierung',
+          component: <Renovation />,
+        },
+        {
           key: 'detailbeschrieb',
           value: 'Detailbeschrieb',
+          shortvalue: 'Fakten',
+          component: <Facts />,
         },
       ]
     },
@@ -68,7 +79,7 @@ const navItems = [
       key: 'umgebung',
       value: 'Umgebung',
       component: <p>Umgebung</p>,
-      video: lage,
+      image: kontakt,
       submenu: [
         {
           key: 'lage',
@@ -78,6 +89,7 @@ const navItems = [
         {
           key: 'gemeinde',
           value: 'Gemeinde',
+          image: gemeinde,
           component: <Gemeinde />,
         },
         {

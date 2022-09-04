@@ -17,7 +17,6 @@ const Box = styled.div`
 const Content = styled.div`
   background: #fff;
   padding: 0 20px 30px;
-  width: 100%;
 `;
 
 const InlineLink = styled(Link)`

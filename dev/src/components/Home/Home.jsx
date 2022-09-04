@@ -10,7 +10,7 @@ import Floor from "../../assets/floorplan.svg";
 import Excavator from "../../assets/excavator.svg";
 import Land from "../../assets/land.svg";
 
-const Content = styled.div`
+const Content = styled.main`
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
   h2 {
@@ -18,6 +18,16 @@ const Content = styled.div`
   }
   p {
     padding: 0 20px;
+  }
+`;
+
+const MainArticle = styled.article`
+  background: #eee;  
+  padding: 5px;
+  p {
+    line-height: 1.6em;
+    margin: 10px;
+    padding: 0 10px;
   }
 `;
 
@@ -32,33 +42,8 @@ const Image = styled.div`
   }
   @media (max-width: 679px) {
     height: 200px;
-    background-size: 220%;
+    background-size: 200%;
   }
-`;
-
-const VideoContainer = styled.div`
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  margin: 10px;
-  &::after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(200,200,200,.6);
-    z-index: 1001;
-  }
-`;
-
-const Video = styled.video`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000;
 `;
 
 const CustomIcon = styled.div`
@@ -83,18 +68,18 @@ const Fence = styled(CustomIcon)`
   mask-image: url(${Land});
 `;
 
-const Facts = styled.div`
+const Facts = styled.article`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 10px;
 `;
 
-const Fact = styled.div`
-  flex-grow: 1;
+const Fact = styled.article`
   display: flex;
   justify-content: left;
-  width: calc(33.33% - 84px);
-  padding: 0 0 60px 0;
+  width: 300px;
+  padding: 30px 0;
   h3 {
     margin: 0;
     padding: 5px 0;
@@ -105,14 +90,9 @@ const Fact = styled.div`
     margin: 0;
     padding: 0;
     font-size: 18px;
+    color: #464;
   }
-  @media (max-width: 1009px) {
-    width: calc(50% - 84px);
-  }
-  @media (max-width: 679px) {
-    width: calc(100% - 84px);
-  }
-`
+`;
 
 const FactImage = styled.div`
   width: 104px;
@@ -137,7 +117,9 @@ const Home = () => {
         {/*<VideoContainer><Video autoPlay loop muted><source poster={home} src={homevideo} type="video/mp4" /></Video></VideoContainer>*/}
         <Image />
         <h2>Reihenfamilienhaus in die glückliche Erlenweg</h2>
-        <p>Lorem ipsum</p>
+        <MainArticle itemscope itemtype="https://schema.org/Offer">
+        <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage ein fein saniertes 6.5 Zimmer Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 230 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse</p>
+        </MainArticle>
         <Facts>
           <Fact>
             <FactImage>
@@ -163,7 +145,7 @@ const Home = () => {
             </FactImage>
             <div>
             <h3>Verkaufspreis</h3>
-            <p>Preis auf Anfrage</p>
+            <p>CHF 1'450'000.-</p>
             </div>
           </Fact>
           <Fact>

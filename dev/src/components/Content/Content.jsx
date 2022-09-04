@@ -13,6 +13,7 @@ const Container = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
+  width: 100%;
   @media (max-width: 679px) {
     flex-direction: column;
   }
@@ -93,23 +94,18 @@ const Image = styled.div`
 `;
 
 const Content = ({main, sub}) => {
-
   const currentMain = NAV_ITEMS.find(item => item.key === main) || {};
   const current = currentMain.submenu && currentMain.submenu.length ? currentMain.submenu.find(item => sub === item.key) : {};
   const renderContent = () => current.component || currentMain.component || <>no comp</>
-  const subtitle = current.value ? ` - ${current.value}` : '';
+  const subtitle = current.value || currentMain.value || '';
 
   return (
     <Container>
       {currentMain.video && <VideoContainer><Video autoPlay loop muted><source poster={currentMain.image} src={currentMain.video} type="video/mp4" /></Video></VideoContainer>}
-      {currentMain.image && <Image bg={currentMain.image} />}
-      <h2>{currentMain.value} {subtitle}</h2>
+      {(current.image && <Image bg={current.image} />) || (currentMain.image && <Image bg={currentMain.image} />)}
+      <h2>{subtitle}</h2>
       <ContentContainer>
-        {subtitle && (
-        <LeftNav>
-          <NavItems main={main} active={sub} />
-        </LeftNav>
-        )}
+        {currentMain.submenu && (<LeftNav><NavItems main={main} active={sub} /></LeftNav>)}
         {renderContent()}
       </ContentContainer>
     </Container>

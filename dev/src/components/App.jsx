@@ -1,5 +1,5 @@
 import {
-  BrowserRouter, Routes, Route
+  HashRouter, Routes, Route
 } from "react-router-dom";
 import React, { PureComponent } from 'react';
 
@@ -42,7 +42,7 @@ class App extends PureComponent {
     return (
       <MainContainer>
         <InnerContainer>
-          <BrowserRouter>
+          <HashRouter>
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -50,7 +50,7 @@ class App extends PureComponent {
               <Route path="error" element={<ErrorRenderer />} />
             </Routes>
             <Footer />
-          </BrowserRouter>
+          </HashRouter>
         </InnerContainer>
       </MainContainer>
     );
