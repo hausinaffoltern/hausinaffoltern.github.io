@@ -80,6 +80,39 @@ const Privacy = () => {
       gerichtliche Anordnungen verpflichtet sind. Eine Weitergabe Ihrer persönlichen Daten an
       Dritte zu anderen als den aufgeführten Zwecken findet nicht statt.</p>
 
+      <h4>2.2 Analyse-Tools</h4>
+      <p>Diese Webseite kann Google Analytics benutzen, einen Webanalysedienst der Google Inc.
+      1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google Analytics verwendet
+      sog. "Cookies", Textdateien, die auf Ihrem Webbrowser gespeichert werden und die eine
+      Analyse der Benutzung der Webseite durch Sie ermöglichen (siehe oben Cookies). Die
+      durch den Cookies erzeugten Informationen (Browser-Typ/-Version, verwendetes
+      Betriebssystem, Referrer URL zuvor besuchte Webseite, IP-Adresse, Uhrzeit der
+      Serveranfrage) über Ihre Benutzung dieser Webseite werden in der Regel an einen Server 
+      von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-
+      Anonymisierung auf unserer Webseite wird Ihre IP-Adresse von Google jedoch innerhalb 
+      von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des
+      Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.</p>
+
+      <p>Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA
+      übertragen und dort gekürzt. Google wird diese Informationen benutzen, um Ihre Nutzung
+      der Webseite auszuwerten, um Reports über die Websiteaktivitäten für die
+      Webseitenbetreiberin zusammenzustellen und um weitere mit der Webseitennutzung und
+      der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese
+      Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben ist
+      oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Die im Rahmen von
+      Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten
+      von Google zusammengeführt.</p>
+
+      <p>Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser
+      Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall
+      gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können.
+      Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie
+      erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem
+      zuvor benannten Zweck einverstanden. Weitere Informationen über den genutzten
+      Webanalyse-Dienst finden Sie auf der Website von Google Analytics. Eine Anleitung, wie
+      Sie die Verarbeitung ihrer Daten durch den Webanalyse-Dienst verhindern können, finden
+      Sie unter http://tools.google.com/dlpage/gaoptout?hl=de.</p>
+
       <h3>3 IHRE RECHTE</h3>
       <p>Sie können jederzeit Auskunft über Ihre von uns gespeicherten Daten verlangen. Wir bitten
       Sie hierzu per E-Mail ein Auskunftsbegehren an untenstehende Adresse zu senden.
@@ -112,14 +145,13 @@ const Privacy = () => {
       <h3>4 KONTAKTDATEN</h3>
       <p>Hier sind unsere Kontaktdaten:< br/>
       Konrad Hefelle, Erlenweg 4, 8910 Affoltern am Albis</p>
-
       <p>hausinaffoltern@eclipso.ch<br />hausinaffoltern.online</p>
       <h3>5 ÄNDERUNG DIESER DATENSCHUTZERKLÄRUNG</h3>
-      <p>Wir können diese Datenschutzerklärung jederzeit ändern oder anpassen. Die aktuelle Datenschutzerklärung kann auf www.hausinaffoltern.online/datenschutz abgerufen werden.</p>
+      <p>Wir können diese Datenschutzerklärung jederzeit ändern oder anpassen. Die aktuelle 
+        Datenschutzerklärung kann auf hausinaffoltern.online/#/datenschutz abgerufen werden.</p>
       <p>Affoltern am Albis, 04. September 2022</p>
     </Container>
   );
 };
 
 export default Privacy;
-

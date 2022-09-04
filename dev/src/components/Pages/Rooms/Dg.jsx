@@ -36,10 +36,7 @@ const Dg = () => {
         sources={sources}
         slide={lightboxController.slide}
       />
-
       <Plan level="dg" openLightboxOnSlide={openLightboxOnSlide} />
-      <h3>Ipsum</h3>
-      <p>Lorem</p>
     </Content>
   );
 };

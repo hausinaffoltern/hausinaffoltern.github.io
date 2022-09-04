@@ -101,7 +101,7 @@ const navItems = [
         },
         {
           key: 'infrastruktur',
-          value: 'Infrasturktur',
+          value: 'Infrastruktur',
           component: <Infrastruktur />,
         },
       ]
@@ -118,7 +118,7 @@ const navItems = [
       component: <Kontakt />
     },
     {
-      key: 'privacy',
+      key: 'datenschutz',
       value: ' Datenschutzerklärung',
       component: <Privacy />
     },

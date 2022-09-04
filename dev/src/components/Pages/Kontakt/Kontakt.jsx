@@ -98,10 +98,10 @@ const Kontakt = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const errors = {
-    firstname: 'Vorname ist obligatorish!',
-    lastname: 'Name ist obligatorish!',
-    email: 'Email ist obligatorisch',
-    emailIncorrect: 'Incorrect email',
+    firstname: 'Vorname ist erforderlich',
+    lastname: 'Nachname ist erforderlic!',
+    email: 'E-Mail Adresse ist erforderlich',
+    emailIncorrect: 'Falsche E-mail Adresse',
     phone: '',
     comment: '',
   }
@@ -170,7 +170,7 @@ const Kontakt = () => {
         <TextField
           size="md"
           autoComplete="family-name"
-          placeholder="Name"
+          placeholder="Nachname"
           name="entry.792893174" id="entry.792893174"
           value={lastname}
           error={!!error.lastname}
@@ -184,7 +184,7 @@ const Kontakt = () => {
         <TextField
           size="md"
           autoComplete="email"
-          placeholder="E-mailaddresse"
+          placeholder="E-mail Adresse"
           name="entry.1950217878" id="entry.1950217878"
           value={email}
           error={!!error.email}
@@ -214,7 +214,7 @@ const Kontakt = () => {
         </Textarea>
       </Box>
       <div>
-        Mit dem Senden diese Anfrage stimme ich zu, dass hausinaffoltern.online meine Daten wie in die&nbsp;<InlineLink to="/privacy">Datenschutzerklärung </InlineLink>&nbsp;beschrieben verarbeiten darf.
+      Mit dem Senden dieser Anfrage stimme ich zu, dass hausinaffoltern.online meine Daten wie in die&nbsp;<InlineLink to="/datenschutz">Datenschutzerklärung</InlineLink>&nbsp;beschrieben verarbeiten darf.
       </div>
       <Box>
         <Button type="submit">Anfrage senden</Button>
@@ -224,7 +224,7 @@ const Kontakt = () => {
 
   return (
     <Content>
-      <p>Falls Sie Interesse an einer Besichtigung haben, kontaktieren sie uns über das Kontaktformular.</p>
+      <p>Falls Sie Interesse haben und einen Besichtigungstermin vereinbaren möchten, bitte kontaktieren Sie uns via untenstehendem Kontaktformular.</p>
       <CssVarsProvider theme={mantineTheme}>
       {submitted ? <SubmittedContent><h1>Danke!<br />Ihre Nachricht ist zugeschickt.</h1></SubmittedContent> : renderForm()}
       </CssVarsProvider>

@@ -27,6 +27,31 @@ import i25 from '../../../assets/gallery/25_dg.jpg';
 import i26 from '../../../assets/gallery/26_dg.jpg';
 import i27 from '../../../assets/gallery/27_hg.jpg';
 import i28 from '../../../assets/gallery/28_hg.jpg';
+import i29 from '../../../assets/gallery/29_gt.jpg';
+import i30 from '../../../assets/gallery/30_ut.jpg';
+import i31 from '../../../assets/gallery/31_uh.jpg';
+import i32 from '../../../assets/gallery/32_ug.jpg';
+import i33 from '../../../assets/gallery/33_ue.jpg';
+import i34 from '../../../assets/gallery/34_uh.jpg';
+import i35 from '../../../assets/gallery/35_uk.jpg';
+import i36 from '../../../assets/gallery/36_ug.jpg';
+import i37 from '../../../assets/gallery/37_ug.jpg';
+import i38 from '../../../assets/gallery/38_uw.jpg';
+import i39 from '../../../assets/gallery/39_ga.jpg';
+import i40 from '../../../assets/gallery/40_os.jpg';
+import i41 from '../../../assets/gallery/41_os.jpg';
+import i42 from '../../../assets/gallery/42_os.jpg';
+import i43 from '../../../assets/gallery/43_og.jpg';
+import i44 from '../../../assets/gallery/44_og.jpg';
+import i45 from '../../../assets/gallery/45_ob.jpg';
+import i46 from '../../../assets/gallery/46_ob.jpg';
+import i47 from '../../../assets/gallery/47_ob.jpg';
+import i48 from '../../../assets/gallery/48_ok.jpg';
+import i49 from '../../../assets/gallery/49_ok.jpg';
+import i50 from '../../../assets/gallery/50_ok.jpg';
+import i51 from '../../../assets/gallery/51_os.jpg';
+import i52 from '../../../assets/gallery/52_os.jpg';
+import i53 from '../../../assets/gallery/53_os.jpg';
 
 /*
 
@@ -62,7 +87,8 @@ const i28 = React.lazy(() => import( webpackChunkName: 'images'  '../../../asset
 */
 
 
-const images = [
+const images = {
+  eg: [
     {
       src: i01,
       width: 4,
@@ -147,6 +173,8 @@ const images = [
       height: 3,
       title: 'Wohnzimmer',
     },
+  ],
+dg:[
     {
       src: i15,
       width: 4,
@@ -215,10 +243,154 @@ const images = [
     },
     {
       src: i26,
-      width: 4,
-      height: 3,
+      width: 3,
+      height: 4,
       title: 'Dachgeschoss',
     },
+],
+og:[
+  {
+    src: i40,
+    width: 4,
+    height: 3,
+    title: 'Gross Schlafzimmer',
+  },
+  {
+    src: i41,
+    width: 4,
+    height: 3,
+    title: 'Gross Schlafzimmer',
+  },
+  {
+    src: i42,
+    width: 4,
+    height: 3,
+    title: 'Gross Schlafzimmer',
+  },
+  {
+    src: i43,
+    width: 3,
+    height: 4,
+    title: 'Gang',
+  },
+  {
+    src: i44,
+    width: 3,
+    height: 4,
+    title: 'Gang',
+  },
+  {
+    src: i45,
+    width: 4,
+    height: 3,
+    title: 'Badezimmer',
+  },
+  {
+    src: i46,
+    width: 4,
+    height: 3,
+    title: 'Badezimmer',
+  },
+  {
+    src: i47,
+    width: 3,
+    height: 4,
+    title: 'Badezimmer',
+  },
+  {
+    src: i48,
+    width: 4,
+    height: 3,
+    title: 'Büro / Gästezimmer',
+  },
+  {
+    src: i49,
+    width: 4,
+    height: 3,
+    title: 'Büro / Gästezimmer',
+  },
+  {
+    src: i50,
+    width: 3,
+    height: 4,
+    title: 'Büro / Gästezimmer',
+  },
+  {
+    src: i51,
+    width: 4,
+    height: 3,
+    title: 'Klein Schlafzimmer',
+  },
+  {
+    src: i52,
+    width: 3,
+    height: 4,
+    title: 'Klein Schlafzimmer',
+  },
+  {
+    src: i53,
+    width: 4,
+    height: 3,
+    title: 'Klein Schlafzimmer',
+  },
+],
+ug:[
+  {
+    src: i30,
+    width: 4,
+    height: 3,
+    title: 'Treppe',
+  },
+  {
+    src: i31,
+    width: 3,
+    height: 4,
+    title: 'Hobbyraum',
+  },
+  {
+    src: i32,
+    width: 3,
+    height: 4,
+    title: 'Gang',
+  },
+  {
+    src: i33,
+    width: 3,
+    height: 4,
+    title: 'Elektroverteiler',
+  },
+  {
+    src: i34,
+    width: 3,
+    height: 4,
+    title: 'Heizung',
+  },
+  {
+    src: i35,
+    width: 4,
+    height: 3,
+    title: 'Keller',
+  },
+  {
+    src: i36,
+    width: 4,
+    height: 3,
+    title: 'Gang',
+  },
+  {
+    src: i37,
+    width: 3,
+    height: 4,
+    title: 'Wasserverteiler',
+  },
+  {
+    src: i38,
+    width: 3,
+    height: 4,
+    title: 'Waschküche',
+  },
+],
+outside: [
     {
       src: i27,
       width: 5,
@@ -230,7 +402,20 @@ const images = [
       width: 4,
       height: 3,
       title: 'Haus',
+    },
+    {
+      src: i29,
+      width: 3,
+      height: 4,
+      title: 'Gartensitzplatz',
+    },
+    {
+      src: i39,
+      width: 3,
+      height: 4,
+      title: 'Garten von oben',
     }
-  ];
+]
+};
   
   export default images;

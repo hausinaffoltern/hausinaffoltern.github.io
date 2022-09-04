@@ -40,8 +40,6 @@ const Eg = () => {
       />
 
       <Plan level="eg" openLightboxOnSlide={openLightboxOnSlide} />
-      <h3>Ipsum</h3>
-      <p>Lorem</p>
     </Content>
   );
 };

@@ -39,8 +39,6 @@ const Og = () => {
       />
 
       <Plan level="og" openLightboxOnSlide={openLightboxOnSlide} />
-      <h3>Ipsum</h3>
-      <p>Lorem</p>
     </Content>
   );
 };
