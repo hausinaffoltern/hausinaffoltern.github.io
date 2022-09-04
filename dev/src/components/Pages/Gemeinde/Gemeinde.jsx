@@ -1,19 +1,36 @@
 import React from 'react';
+import gemeinde from '../../../assets/umgebung/gemeinde.jpg'
 import styled from 'styled-components';
 
 const MapContainer = styled.div`
   width: 100%;
-  height: 500px;
   padding: 0 0 20px;
-  iframe {
+  img {
     width: 100%;
-    height: 100%;
     border: none;
   }
 `;
 const Container = styled.div`
   width: calc(100% - 40px);
   padding: 0 20px;
+`;
+
+const Image = styled.div`
+  height: 400px;
+  background-image: url(${gemeinde});
+  background-size: 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media (max-width: 1009px) {
+    height: 300px;
+    background-size: 200%;
+    background-position: center 40%;
+  }
+  @media (max-width: 679px) {
+    background-size: 260%;
+    background-position: center 42%;
+    height: 200px;
+  }
 `;
 
 const Link = styled.a`
@@ -33,7 +50,7 @@ const Gemeinde = () => {
 
     
     <MapContainer>
-      <iframe title="gemeinde" src="https://www.google.com/maps/d/u/0/embed?mid=1ie07oENDuo85FUB7jUT0C3bPcwiHh9k&hl=de&ehbc=2E312F" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <Image />
       </MapContainer>
     </Container>
   );

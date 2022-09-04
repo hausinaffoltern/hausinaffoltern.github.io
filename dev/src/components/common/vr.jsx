@@ -76,7 +76,7 @@ export const vr = [
         value: 'e63144c3b5cc4fcebc3ac6ca0d215aa3',
     },
 ];
-const getBaseUrl = code => `https://momento360.com/e/u/${code}?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=100&size=medium`;
+const getBaseUrl = code => `https://momento360.com/e/u/${code}?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium`;
 
 export const getSrc = name => {
     const item = vr.find(e => e.key === name);

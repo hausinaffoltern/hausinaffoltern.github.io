@@ -32,54 +32,49 @@ const Ul = styled.ul`
 const Renovation = () => {
   return (
     <Container>
-    <h3>2022</h3>
-    <Ul>
-      <li>Treppenhaus streichen</li>
-    </Ul>
-    <h3>2021</h3>
-    <Ul>
-    <li>Lukarnenverkleidung Dachgeschoss Fenster</li>
-    <li>Dachfenster ersetzen + Ausenrolladen mit Solarbetrieb und Fernbedienung</li>
-    <li>Treppen EG-OG ersetzen</li>
-    </Ul>
-    <h3>2020</h3>
-    <Ul>
-    <li>Wasserverteiler in Keller</li>
-    <li>Heizkörper</li>
-    <li>Gast WC komplett Sanierung</li>
-    <li>Dachgschoss Trennwand mit Schiebetür</li>
-    </Ul>
-    <h3>2019</h3>
-    <Ul>
-    <li>Wohnzimmerwandbelag und Licht</li>
-    <li>Terassenzaun</li>
-    <li>Boden ersetzen OG</li>
-    <li>Fenster ersetzen OG</li>
-    <li>Lamellenstoren mit Fernbedienung OG</li>
-    </Ul>
-    <h3>2018</h3>
-    <Ul>
-    <li>Terassenüberdachung für Gartensitzplatz</li>
-    <li>Terassenabdeckung mit Bambusdielen</li>
-    <li>Autoabstellplatz Renovierung</li>
-    <li>Wasserhauptleitungersatz</li>
-    </Ul>
-    <h3>2017</h3>
-    <Ul>
-    <li>Fenster ersetzen EG</li>
-    <li>Lamellenstoren mit Fernbedienung EG ung DG</li>
-    <li>Heizungsanierung</li>
-    <li>Gartenumbau</li>
-    </Ul>
-    <h3>2016</h3>
-    <Ul>
-    <li>Eingang und Küche umbau</li>
-    <li>Badezimmersanierung</li>
-    <li>Neue Badezimmer DG</li>
-    <li>Neue Dachfenster installieren + Ausenrolladen mit Solarbetrieb und Fernbedienung Badezimmer DG</li>
-    <li>Boden ersetzen EG und DG</li>
-    <li>Komplett Malerei</li>
-    </Ul>
+      <h3>2016</h3>
+      <Ul>
+      <li>Umbau Eingang und Küche</li>
+      <li>Badezimmersanierung OG</li>
+      <li>Neues Badezimmer DG</li>
+      <li>Neues Dachfenster + Aussenrolladen mit Solarbetrieb und Fernbedienung Badezimmer DG</li>
+      <li>Boden ersetzen EG und DG</li>
+      <li>Komplettes Streichen</li>
+      </Ul>
+      <h3>2017</h3>
+      <Ul>
+      <li>Fenster ersetzen EG</li>
+      <li>Lamellenstoren mit Fernbedienung EG ung DG</li>
+      <li>Heizungsanierung</li>
+      <li>Gartenumbau</li>
+      </Ul>
+      <h3>2018</h3>
+      <Ul>
+      <li>Terassenüberdachung EG</li>
+      <li>Gartensitzplatz sanieren, Bambusdielen verlegen</li>
+      <li>Aussenparkplatz renovieren</li>
+      <li>Wasserhauptleitung ersetzen</li>
+      </Ul>
+      <h3>2019</h3>
+      <Ul>
+      <li>Wohnzimmer Wandverkleidung mit Naturstein und Licht</li>
+      <li>Boden ersetzen OG</li>
+      <li>Fenster ersetzen OG</li>
+      <li>Lamellenstoren mit Fernbedienung OG</li>
+      </Ul>
+      <h3>2020</h3>
+      <Ul>
+      <li>Wasserverteiler im Keller</li>
+      <li>Radiatoren ersetzen</li>
+      <li>Gäste WC komplette Sanierung</li>
+      <li>Trennwand mit Schiebetür DG</li>
+      </Ul>
+      <h3>2021</h3>
+      <Ul>
+      <li>Lukarnenverkleidung Fenster DG</li>
+      <li>Dachfenster ersetzen + Aussenrolladen mit Solarbetrieb und Fernbedienung</li>
+      <li>Treppen EG-OG ersetzen</li>
+      </Ul>
     </Container>
   );
 };

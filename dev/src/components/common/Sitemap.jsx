@@ -3,7 +3,10 @@ import React from 'react';
 // import home from '../../assets/home.jpg'
 import gemeinde from '../../assets/gemeinde.jpg'
 import kontakt from '../../assets/kontakt.jpg'
-// import lage from '../../assets/lage.mp4'
+import lage from '../../assets/lage.jpg'
+import beschreibung from '../../assets/beschreibung.jpg'
+import detailbeschrieb from '../../assets/detailbeschrieb.jpg'
+import renovierungen from '../../assets/renovierungen.jpg'
 import Overview from '../Pages/Overview';
 import Renovation from '../Pages/Renovation';
 import Kontakt from '../Pages/Kontakt';
@@ -27,18 +30,21 @@ const navItems = [
         {
           key: 'beschreibung',
           value: 'Beschreibung',
+          image: beschreibung,
           component: <Overview />,
         },
         {
           key: 'renovierungen',
           value: 'Renovierungen',
           shortvalue: 'Sanierung',
+          image: renovierungen,
           component: <Renovation />,
         },
         {
           key: 'detailbeschrieb',
           value: 'Detailbeschrieb',
           shortvalue: 'Fakten',
+          image: detailbeschrieb,
           component: <Facts />,
         },
       ]
@@ -84,6 +90,7 @@ const navItems = [
         {
           key: 'lage',
           value: 'Lage',
+          image: lage,
           component: <Lage />,
         },
         {

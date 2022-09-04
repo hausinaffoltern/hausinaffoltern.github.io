@@ -53,8 +53,7 @@ const Ul = styled.ul`
       font-weight: bold;
       width: 10px;
       height: 10px;
-      top: 50%;
-      margin-top: -5px;
+      top: 11px;
       left: 0;
     }
   }
@@ -71,9 +70,9 @@ const Facts = () => {
           <Dt>Zimmer</Dt>   <Dd>6.5</Dd>
           <Dt>Badezimmer</Dt>   <Dd>3</Dd>
           <Dt>Baujahr</Dt>   <Dd>1979</Dd>
-          <Dt>Letzte Renovation</Dt>   <Dd>2020</Dd>
+          <Dt>Letzte Renovation</Dt>   <Dd>2021</Dd>
           <Dt>Wärmeerzeugung</Dt>   <Dd>Ölheizung</Dd>
-          <Dt>Wärmeverteilung</Dt>   <Dd>Heizkörper</Dd>
+          <Dt>Wärmeverteilung</Dt>   <Dd>Radiatoren</Dd>
         </Dl>
         <h3>Angebot</h3>
         <Dl>
@@ -83,29 +82,29 @@ const Facts = () => {
       <Content>
         <h3>Flachen</h3>
         <Dl>
-          <Dt>Nettowohnfläche</Dt>   <Dd>150m²</Dd>
+          <Dt>Nettowohnfläche</Dt>   <Dd>168m²</Dd>
           <Dt>Grundstücksfläche</Dt>   <Dd>205m²</Dd>
-          <Dt>Gesamtnutzfläche</Dt>   <Dd>230m²</Dd>
+          <Dt>Gesamtnutzfläche</Dt>   <Dd>220m²</Dd>
           <Dt>Gebäudevolumen</Dt>   <Dd>678m³</Dd>
         </Dl>
         <h3>Eigenschaften</h3>
         <Container>
           <Content>
             <Ul>
-              <li>Freibad</li>
-              <li>Haustiere erlaubt</li>
-              <li>Kinderfreundlich</li>
               <li>Komplett saniert</li>
-              <li>Privatweg</li>
+              <li>Ruhig</li>
+              <li>Schule und Kindergarten</li>
+              <li>Kinderfreundlich</li>
+              <li>Sonnig</li>
             </Ul>
           </Content>
           <Content>
             <Ul>
-              <li>Ruhig</li>
-              <li>Schule</li>
-              <li>Sonnig</li>
+              <li>Privatweg</li>
               <li>Sportanlagen</li>
+              <li>Haustiere erlaubt</li>
               <li>Verkehrsverbindung</li>
+              <li>Freibad</li>
             </Ul>
           </Content>
         </Container>

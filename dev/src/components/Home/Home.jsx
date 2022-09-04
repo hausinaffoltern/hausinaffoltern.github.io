@@ -118,7 +118,7 @@ const Home = () => {
         <Image />
         <h2>Reihenfamilienhaus in die glückliche Erlenweg</h2>
         <MainArticle itemscope itemtype="https://schema.org/Offer">
-        <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage ein fein saniertes 6.5 Zimmer Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 230 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse</p>
+        <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage ein fein saniertes Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse</p>
         </MainArticle>
         <Facts>
           <Fact>
@@ -164,7 +164,7 @@ const Home = () => {
             </FactImage>
             <div>
             <h3>Nettowohnflache</h3>
-            <p>150m2 + 18m2 beheizte<br />hobbyraum im keller</p>
+            <p>168 m²</p>
             </div>
           </Fact>
           <Fact>
@@ -191,7 +191,7 @@ const Home = () => {
             </FactImage>
             <div>
             <h3>Letzte renovation</h3>
-            <p>2016</p>
+            <p>2021</p>
             </div>
           </Fact>
           <Fact>
@@ -200,7 +200,7 @@ const Home = () => {
             </FactImage>
             <div>
             <h3>Grundstückflache</h3>
-            <p>205m<sup>2</sup></p>
+            <p>205 m²</p>
             </div>
           </Fact>
         </Facts>

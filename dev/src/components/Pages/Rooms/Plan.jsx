@@ -24,7 +24,7 @@ const LinksContainer = styled.div`
 const Plan = ({level, openLightboxOnSlide}) => {
   const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
+  /*useEffect(() => {
     function handleResize() {
       setVisible(false)
     }
@@ -32,7 +32,7 @@ const Plan = ({level, openLightboxOnSlide}) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  })
+  })*/
 
   useEffect(() => {
     function handleOrientationhange() {
