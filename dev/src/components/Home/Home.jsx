@@ -27,12 +27,12 @@ const Image = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin: 10px;
   @media (max-width: 1009px) {
     height: 300px;
   }
   @media (max-width: 679px) {
     height: 200px;
+    background-size: 220%;
   }
 `;
 
@@ -136,7 +136,7 @@ const Home = () => {
       <Content>
         {/*<VideoContainer><Video autoPlay loop muted><source poster={home} src={homevideo} type="video/mp4" /></Video></VideoContainer>*/}
         <Image />
-        <h2>Rheienmittelhaus in die glückliche Erlenweg - Affoltern a. A.</h2>
+        <h2>Reihenfamilienhaus in die glückliche Erlenweg</h2>
         <p>Lorem ipsum</p>
         <Facts>
           <Fact>

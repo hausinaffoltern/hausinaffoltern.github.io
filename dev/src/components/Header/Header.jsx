@@ -14,12 +14,14 @@ const Navigation = styled.ul`
   list-style: none;
   margin: 20px 0;
   padding: 0;
+  @media (max-width: 679px) {
+    margin: 2px 0;
+  }
 `;
 
 const Logo = styled.h1`
   display: flex;
-  margin-right: 28px;
-  margin-left: 10px;
+  margin: 20px 28px 20px 10px;
   font-family: 'Caveat', cursive;
   font-size: 48px;
   a {
@@ -28,6 +30,9 @@ const Logo = styled.h1`
     &:hover {
         color #585;
     }
+  }
+  @media (max-width: 679px) {
+    margin: 0 28px 0 10px;
   }
 `;
 
@@ -63,9 +68,17 @@ const NavItem = styled.li`
       transition: 0.3s ease;
     }
   }
+  a.small {
+    display: none;
+  }
   &:hover ul {
       display: flex;
       flex-direction: column;
+  }
+  @media (max-width: 679px) {
+    &::after {
+      display: none;
+    }
   }
 `;
 
@@ -93,6 +106,9 @@ const SubNavigation = styled.ul`
     &::after {
         display: none;
     }
+  }
+  @media (max-width: 679px) {
+    display: none !important;
   }
 `;
 
@@ -131,7 +147,7 @@ const Header = () => {
         </NavItem>
         <NavItem>
             <Link to="/gallery">
-                Impressionen
+                Fotos
             </Link>
         </NavItem>
         <NavItem>

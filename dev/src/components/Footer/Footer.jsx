@@ -16,7 +16,7 @@ const BottomContainer = styled.div`
 const Footer = () => {
   return (
     <BottomContainer>
-      <p> hausinaffoltern.online &copy; &nbsp; &nbsp; &nbsp; &nbsp; E-mailaddresse: <Link
+      <p> hausinaffoltern.online &copy; | <Link to="privacy">Datenschutzerklärung</Link> | <Link
             to='#'
             onClick={(e) => {
                 window.location.href = "mailto:hausinaffoltern@eclipso.ch?subject=Anfrage von Haus in Affoltern am Albis | hausinaffoltern.online";

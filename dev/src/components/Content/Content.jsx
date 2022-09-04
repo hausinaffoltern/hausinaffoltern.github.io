@@ -13,10 +13,13 @@ const Container = styled.div`
 
 const ContentContainer = styled.div`
   display: flex;
+  @media (max-width: 679px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftNav = styled.ul`
-  width: 200px;
+  /*justify-content: center;*/
   margin: 0 10px;
   padding: 0;
   & li {
@@ -25,8 +28,26 @@ const LeftNav = styled.ul`
         line-height: 20px; 
         width: calc(100% - 30px);
     }
+    a.big {
+      display: block;
+    }
+    a.small {
+      display: none;
+    }
     &::after {
         display: none;
+    }
+  }
+  @media (max-width: 679px) {
+    display: flex;
+    & li {
+      padding: 0;
+      a.big {
+        display: none;
+      }
+      a.small {
+        display: block;
+      }
     }
   }
 `;
@@ -60,9 +81,15 @@ const Video = styled.video`
 const Image = styled.div`
   height: 400px;
   background-image: url(${props => props.bg});
-  background-size: content;
-  background-position: 0 70%;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
+  @media (max-width: 1009px) {
+    height: 300px;
+  }
+  @media (max-width: 679px) {
+    height: 200px;
+  }
 `;
 
 const Content = ({main, sub}) => {

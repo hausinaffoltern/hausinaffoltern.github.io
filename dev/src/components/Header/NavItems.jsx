@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import NAV_ITEMS from '../common/Sitemap';
 
 const NavItem = styled.li`
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0 10px;
   a {
     text-decoration: none;
@@ -25,10 +26,13 @@ const NavItem = styled.li`
 
 const NavItems = ({main, active}) => (
   <>
-    {NAV_ITEMS.find(item => item.key === main).submenu.map(({key,value}) => (
+    {NAV_ITEMS.find(item => item.key === main).submenu.map(({key,value, shortvalue}) => (
       <NavItem key={key} active={active === key}>
-          <Link to={`/${main}/${key}`}>
+          <Link className="big" to={`/${main}/${key}`}>
               {value}
+          </Link>
+          <Link className="small" to={`/${main}/${key}`}>
+              {shortvalue || value}
           </Link>
       </NavItem>
     ))}

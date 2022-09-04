@@ -1,6 +1,7 @@
 import React from 'react';
 import bg from '../../assets/bg.jpg'
 import home from '../../assets/home.jpg'
+import kontakt from '../../assets/kontakt.jpg'
 import lage from '../../assets/lage.mp4'
 import Overview from '../Pages/Overview';
 import Kontakt from '../Pages/Kontakt';
@@ -8,6 +9,11 @@ import Photos from '../Pages/Photos';
 import Lage from '../Pages/Lage';
 import Gemeinde from '../Pages/Gemeinde';
 import Infrastruktur from '../Pages/Infrastruktur';
+import Privacy from '../Pages/Privacy';
+import Eg from '../Pages/Rooms/Eg';
+import Ug from '../Pages/Rooms/Ug';
+import Dg from '../Pages/Rooms/Dg';
+import Og from '../Pages/Rooms/Og';
 
 const navItems = [
     {
@@ -24,10 +30,6 @@ const navItems = [
           key: 'detailbeschrieb',
           value: 'Detailbeschrieb',
         },
-        {
-          key: 'grundriss',
-          value: 'Grundriss',
-        },
       ]
     },
     {
@@ -39,18 +41,26 @@ const navItems = [
         {
           key: 'eg',
           value: 'Erdgeschoss',
+          shortvalue: 'EG',
+          component: <Eg />,
         },
         {
           key: 'og',
           value: 'Obergeschoss',
+          shortvalue: 'OG',
+          component: <Og />,
         },
         {
           key: 'dg',
           value: 'Dachgeschoss',
+          shortvalue: 'DG',
+          component: <Dg />,
         },
         {
           key: 'ug',
           value: 'Untergeschoss',
+          shortvalue: 'UG',
+          component: <Ug />,
         },
       ]
     },
@@ -79,14 +89,19 @@ const navItems = [
     },
     {
       key: 'gallery',
-      value: 'Impressionen',
+      value: 'Fotos',
       component: <Photos />,
     },
     {
       key: 'kontakt',
       value: 'Kontakt',
-      image: bg,
+      image: kontakt,
       component: <Kontakt />
+    },
+    {
+      key: 'privacy',
+      value: ' Datenschutzerklärung',
+      component: <Privacy />
     },
   ];
 
