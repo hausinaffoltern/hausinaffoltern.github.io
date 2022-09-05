@@ -19,6 +19,9 @@ const LinksContainer = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
+  @media print {
+    display: none;
+  }
 `;
 
 const Plan = ({level, openLightboxOnSlide}) => {

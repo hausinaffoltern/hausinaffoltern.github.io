@@ -91,7 +91,7 @@ const Links = ({ level, onClick }) => {
         nr: 5, //wz2
       },
       {
-        t: '7%',
+        t: '12%',
         l: '42%',
         nr: 6, //wz2
       }

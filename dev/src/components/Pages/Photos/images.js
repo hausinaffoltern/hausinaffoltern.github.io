@@ -108,6 +108,12 @@ const images = {
       title: 'Wohnzimmer',
     },
     {
+      src: i06,
+      width: 3,
+      height: 4,
+      title: 'Küche',
+    },
+    {
       src: i04,
       width: 4,
       height: 3,
@@ -120,22 +126,10 @@ const images = {
       title: 'Küche + Essen',
     },
     {
-      src: i06,
-      width: 3,
-      height: 4,
-      title: 'Küche',
-    },
-    {
       src: i07,
       width: 4,
       height: 3,
       title: 'Küche',
-    },
-    {
-      src: i08,
-      width: 3,
-      height: 4,
-      title: 'Vorplatz',
     },
     {
       src: i09,
@@ -156,10 +150,10 @@ const images = {
       title: 'Küche + Essen',
     },
     {
-      src: i12,
-      width: 4,
-      height: 3,
-      title: 'Erdgeschoss',
+      src: i08,
+      width: 3,
+      height: 4,
+      title: 'Vorplatz',
     },
     {
       src: i13,
@@ -172,6 +166,12 @@ const images = {
       width: 4,
       height: 3,
       title: 'Wohnzimmer',
+    },
+    {
+      src: i12,
+      width: 4,
+      height: 3,
+      title: 'Erdgeschoss',
     },
   ],
 dg:[
@@ -188,6 +188,12 @@ dg:[
       title: 'Dachwohnzimmer',
     },
     {
+      src: i19,
+      width: 3,
+      height: 4,
+      title: 'Dachbadezimmer',
+    },
+    {
       src: i17,
       width: 4,
       height: 3,
@@ -198,12 +204,6 @@ dg:[
       width: 4,
       height: 3,
       title: 'Dachwohnzimmer',
-    },
-    {
-      src: i19,
-      width: 3,
-      height: 4,
-      title: 'Dachbadezimmer',
     },
     {
       src: i20,

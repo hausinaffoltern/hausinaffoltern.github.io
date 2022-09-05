@@ -23,6 +23,18 @@ const Ul = styled.ul`
       top: 11px;
       left: 0;
     }
+    @media print {
+      line-height: 24px;
+      padding: 4px 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  @media print {
+    margin-left: 20px;
+    padding: 0;
+    list-style-type: square;
   }
 }
 `;
@@ -30,8 +42,8 @@ const Ul = styled.ul`
 const Overview = () => {
   return (
     <Container>
-      <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage ein fein saniertes Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse.</p>
-      <p><strong>Die Vorteile dieser Liegenschaft vermögen zu überzeugen:</strong></p>
+      <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage unser fein saniertes Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse.</p>
+      <h3>Die Vorteile dieser Liegenschaft vermögen zu überzeugen:</h3>
       <Ul>
         <li>Im Dreieck von Zürich, Zug und Luzern</li>
         <li>Autobahnanschluss 5 Min</li>

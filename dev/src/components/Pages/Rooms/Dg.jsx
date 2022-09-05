@@ -6,6 +6,11 @@ import { getSource, getSrc } from '../../common/vr';
 
 const Content = styled.div`
   padding: 10px;
+  h3 {
+    @media print {
+      display: none;
+    }
+  }
 `;
 
 const Dg = () => {

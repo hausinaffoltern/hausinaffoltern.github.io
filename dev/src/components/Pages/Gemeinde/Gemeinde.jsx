@@ -16,9 +16,8 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  height: 400px;
+  height: 500px;
   background-image: url(${gemeinde});
-  background-size: 150%;
   background-position: center center;
   background-repeat: no-repeat;
   @media (max-width: 1009px) {
@@ -27,15 +26,31 @@ const Image = styled.div`
     background-position: center 40%;
   }
   @media (max-width: 679px) {
-    background-size: 260%;
-    background-position: center 42%;
+    background-size: 210%;
+    background-position: center 22%;
     height: 200px;
+  }
+  img {
+    display: none;
+  }
+  @media print {
+    height: auto;
+    img {
+      width: 100%;
+      display: block;
+    } 
   }
 `;
 
 const Link = styled.a`
   text-decoration: none;
   color: #464;
+`;
+
+const Printp = styled.p`
+  @media print {
+    display: none;
+  }
 `;
 
 const Gemeinde = () => {
@@ -46,11 +61,11 @@ const Gemeinde = () => {
 
     <p>Die Gemeinde Affoltern am Albis wurde per 1. Juli 2018 zur Stadt Affoltern am Albis. Auch wenn man in Affoltern am Albis nicht mehr die einstige ländliche Idylle vorfindet, bietet der Ort seinen über 12'000 Einwohnern mit seiner sonnigen, zentralen Lage zwischen den Metropolen Zürich, Zug und Luzern, den guten Verkehrsverbindungen und den grösstenteils gut in die Landschaft eingefügten Überbauungen, dem vielen Grün und der unüberbaubaren Umgebung eine vorzügliche Wohnqualität und eine ansprechende Umwelt.</p>
 
-    <p>Mehrere Fakten über Affoltern a.A: <Link href="https://www.raiffeisen.ch/rch/de/privatkunden/hypotheken/gemeindeinfo.affoltern-am-albis.html" target="_blank">hier</Link></p>
+    <Printp>Mehrere Fakten über Affoltern a.A: <Link href="https://www.raiffeisen.ch/rch/de/privatkunden/hypotheken/gemeindeinfo.affoltern-am-albis.html" target="_blank">hier</Link></Printp>
 
     
     <MapContainer>
-      <Image />
+    <Image><img alt="Affoltern am Albis" src={gemeinde} /></Image>
       </MapContainer>
     </Container>
   );

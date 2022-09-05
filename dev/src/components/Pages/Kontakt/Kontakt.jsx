@@ -20,13 +20,41 @@ const Content = styled.div`
 `;
 
 const InlineLink = styled(Link)`
-  color: #686;
+  color: #676;
   text-decoration: none;
 `;
+
+const Printcontent = styled.article`
+display: none;
+@media print {
+  display: flex;
+  flex-direction: column;
+}
+`; 
+const Normalcontent = styled.article`
+display: flex;
+@media print {
+  display: none;
+}
+`; 
+
+const Printspan = styled.span`
+display: none;
+@media print {
+  display: inline;
+}
+`; 
+const Normalspan = styled.span`
+display: inline;
+@media print {
+  display: none;
+}
+`; 
 
 const SubmittedContent = styled.div`
   text-align: center;
   display: flex;
+  flex-direction: column;
   height: 200px;
   margin-bottom: 100px;
   width: 100%;
@@ -64,7 +92,7 @@ const buttonStyle = {
       background: "#9a9",
       color: 'white',
       '&:hover': {
-        background: '#686',
+        background: '#676',
       },
     },
   },
@@ -224,9 +252,15 @@ const Kontakt = () => {
 
   return (
     <Content>
-      <p>Falls Sie Interesse haben und einen Besichtigungstermin vereinbaren möchten, bitte kontaktieren Sie uns via untenstehendem Kontaktformular.</p>
+      <p>Falls Sie Interesse haben und einen Besichtigungstermin vereinbaren möchten, bitte kontaktieren Sie uns via untenstehende<Printspan>n Erreichbarkeiten</Printspan><Normalspan>m Kontaktformular</Normalspan>.</p>
       <CssVarsProvider theme={mantineTheme}>
-      {submitted ? <SubmittedContent><h1>Danke!<br />Ihre Nachricht ist zugeschickt.</h1></SubmittedContent> : renderForm()}
+      <Printcontent>
+        <h3>Telefon: +41 78 945 35 96</h3>
+        <h3>E-mail Adresse: info@hausinaffoltern.online</h3>
+      </Printcontent>
+      <Normalcontent>
+        {submitted ? <SubmittedContent><h1>Danke!<br />Ihre Nachricht ist zugeschickt.</h1></SubmittedContent> : renderForm()}
+      </Normalcontent>
       </CssVarsProvider>
     </Content>
   );

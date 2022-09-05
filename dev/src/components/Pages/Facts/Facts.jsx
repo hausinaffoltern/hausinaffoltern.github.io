@@ -8,6 +8,22 @@ const Container = styled.div`
   @media (max-width: 1009px) {
     flex-direction: column; 
   }
+  @media (max-width: 480px) {
+    flex-direction: column; 
+  }
+`;
+
+const EContainer = styled.div`
+  width: calc(100% - 40px);
+  padding: 0 20px 30px;
+  display: flex;
+  @media (max-width: 1009px) {
+    flex-direction: column; 
+  }
+  @media print {
+    flex-direction: row; 
+    padding: 0 20px 0;
+  }
 `;
 
 const Content = styled.article`
@@ -28,14 +44,20 @@ const Dt = styled.dt`
   border-bottom: 1px solid #9a9;
   flex-basis: calc(50% - 20px);  
   padding: 10px;
+  @media print {
+    padding: 8px 10px;
+  }
 `;
 
 const Dd = styled.dd`
   border-bottom: 1px solid #9a9;
   flex-basis: calc(50% - 20px);  
   margin: 0;
-  color: #686;
+  color: #676;
   padding: 10px;
+  @media print {
+    padding: 8px 10px;
+  }
 `;
 
 const Ul = styled.ul`
@@ -56,6 +78,9 @@ const Ul = styled.ul`
       top: 11px;
       left: 0;
     }
+  }
+  @media print {
+    list-style-type: square;
   }
 }
 `;
@@ -88,7 +113,7 @@ const Facts = () => {
           <Dt>Gebäudevolumen</Dt>   <Dd>678m³</Dd>
         </Dl>
         <h3>Eigenschaften</h3>
-        <Container>
+        <EContainer>
           <Content>
             <Ul>
               <li>Komplett saniert</li>
@@ -107,7 +132,7 @@ const Facts = () => {
               <li>Freibad</li>
             </Ul>
           </Content>
-        </Container>
+        </EContainer>
       </Content>
     </Container>
   )

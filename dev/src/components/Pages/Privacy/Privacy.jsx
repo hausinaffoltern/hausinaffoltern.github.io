@@ -138,14 +138,14 @@ const Privacy = () => {
       Weiter haben Sie auch die Möglichkeit, Ihre personenbezogenen Daten, die Sie uns
       bereitgestellt haben, zu erhalten oder die Übermittlung an einen anderen Verantwortlichen
       zu verlangen.<br />
-      Wir bitten Sie, uns hierzu per E-Mail an hausinaffoltern@eclipso.ch zu schreiben. Bei einem
+      Wir bitten Sie, uns hierzu per E-Mail an info@hausinaffoltern.online zu schreiben. Bei einem
       unverhältnismässig grossen Aufwand behalten wir uns vor, von Ihnen einen
       Legitimationsausweis sowie die Übernahme der effektiven Kosten vorab zu verlangen.</p>
 
       <h3>4 KONTAKTDATEN</h3>
       <p>Hier sind unsere Kontaktdaten:< br/>
       Konrad Hefelle, Erlenweg 4, 8910 Affoltern am Albis</p>
-      <p>hausinaffoltern@eclipso.ch<br />hausinaffoltern.online</p>
+      <p>info@hausinaffoltern.online<br />hausinaffoltern.online</p>
       <h3>5 ÄNDERUNG DIESER DATENSCHUTZERKLÄRUNG</h3>
       <p>Wir können diese Datenschutzerklärung jederzeit ändern oder anpassen. Die aktuelle 
         Datenschutzerklärung kann auf hausinaffoltern.online/#/datenschutz abgerufen werden.</p>

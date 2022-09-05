@@ -17,6 +17,9 @@ const Navigation = styled.ul`
   @media (max-width: 679px) {
     margin: 2px 0;
   }
+  @media print  {
+    display: none;
+  }
 `;
 
 const Logo = styled.h1`
@@ -33,6 +36,9 @@ const Logo = styled.h1`
   }
   @media (max-width: 679px) {
     margin: 0 28px 0 10px;
+  }
+  @media print {
+    display: none;
   }
 `;
 

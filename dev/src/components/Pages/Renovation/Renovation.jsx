@@ -4,6 +4,12 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: calc(100% - 40px);
   padding: 0 20px 30px;
+  @media print {
+    h3 {
+      padding: 10px 0;
+      margin 0;
+    }
+  }
 `;
 
 const Ul = styled.ul`
@@ -25,6 +31,18 @@ const Ul = styled.ul`
       margin-top: -5px;
       left: 0;
     }
+    @media print {
+      line-height: 24px;
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  @media print {
+    margin-left: 20px;
+    padding: 0;
+    list-style-type: square;
   }
 }
 `;

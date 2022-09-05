@@ -10,6 +10,81 @@ const Container = styled.div`
   padding: 0 20px 30px;
 `;
 
+const SGallery = styled.article`
+.react-photo-gallery--gallery {
+  @media print {
+    img {
+      display: block;
+      width: calc(50% - 10px);
+      margin: 0 5px;
+      height: 270px;
+      object-fit: contain;
+    }
+  }
+}`;
+
+const SGallery1 = styled(SGallery)`
+.react-photo-gallery--gallery {
+  @media print {
+    img {
+      &:nth-child(6) {
+        padding-bottom: 140px;
+      } 
+      &:nth-child(12) {
+        padding-bottom: 165px;
+      }
+      &:nth-child(14),
+      &:nth-child(7) {
+        height: 0px;
+        width: 0px;
+      }
+    }
+  }
+}`;
+const SGallery2 = styled(SGallery)`
+.react-photo-gallery--gallery {
+  @media print {
+    img {
+      &:nth-child(6), 
+      &:nth-child(14) {
+        padding-bottom: 165px;
+      }
+      &:nth-child(11),
+      &:nth-child(12) {
+        height: 0px;
+        width: 0px;
+      }
+    }
+  }
+}`;
+const SGallery3 = styled(SGallery)`
+.react-photo-gallery--gallery {
+  @media print {
+    img {
+      &:nth-child(6) {
+        padding-bottom: 195px;
+      } 
+      &:nth-child(12) {
+        padding-bottom: 165px;
+      }
+    }
+  }
+}`;
+const SGallery4 = styled(SGallery)`
+.react-photo-gallery--gallery {
+  @media print {
+    img {
+      &:nth-child(6) {
+        padding-bottom: 195px;
+      } 
+      &:nth-child(9) {
+        padding-bottom: 415px;
+      }
+    }
+  }
+}`;
+const SGallery5 = styled(SGallery)``;
+
 const Photos = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -29,15 +104,25 @@ const Photos = () => {
   return (
     <Container>
       <h3>Erdgeschoss</h3>
-      <Gallery photos={images.eg} onClick={(e, { index }) => openLightbox(e, { index }, 'eg')} />
+      <SGallery1>
+        <Gallery photos={images.eg} onClick={(e, { index }) => openLightbox(e, { index }, 'eg')} />
+      </SGallery1>
       <h3>Obergeschoss</h3>
-      <Gallery photos={images.og} onClick={(e, { index }) => openLightbox(e, { index }, 'og')} />
+      <SGallery2>
+        <Gallery photos={images.og} onClick={(e, { index }) => openLightbox(e, { index }, 'og')} />
+      </SGallery2>
       <h3>Dachgeschoss</h3>
-      <Gallery photos={images.dg} onClick={(e, { index }) => openLightbox(e, { index }, 'dg')} />
+      <SGallery3>
+        <Gallery photos={images.dg} onClick={(e, { index }) => openLightbox(e, { index }, 'dg')} />
+      </SGallery3>
       <h3>Untergeschoss</h3>
-      <Gallery photos={images.ug} onClick={(e, { index }) => openLightbox(e, { index }, 'ug')} />
+      <SGallery4>
+        <Gallery photos={images.ug} onClick={(e, { index }) => openLightbox(e, { index }, 'ug')} />
+      </SGallery4>
       <h3>Aussen</h3>
-      <Gallery photos={images.outside} onClick={(e, { index }) => openLightbox(e, { index }, 'outside')} />
+      <SGallery5>
+        <Gallery photos={images.outside} onClick={(e, { index }) => openLightbox(e, { index }, 'outside')} />
+      </SGallery5>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>

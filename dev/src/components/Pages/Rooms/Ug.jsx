@@ -6,15 +6,20 @@ import FsLightbox from 'fslightbox-react';
 
 const Content = styled.div`
   padding: 10px;
+  h3 {
+    @media print {
+      display: none;
+    }
+  }
 `;
 
-const Iframe = styled.iframe`
+/*const Iframe = styled.iframe`
   position: absolute;
   top: 30px;
   bottom: 30px;
   left: 30px;
   right: 30px; 
-`;
+`;*/
 
 
 const Ug = () => {

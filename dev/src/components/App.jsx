@@ -2,15 +2,15 @@ import {
   HashRouter, Routes, Route
 } from "react-router-dom";
 import React, { PureComponent } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
-/* components */
-import Header from './Header';
-import Home from './Home';
-import Content from './Content';
-import ErrorRenderer from './ErrorBoundary/ErrorRenderer';
-import styled from 'styled-components';
 import NAV_ITEMS from './common/Sitemap';
+/* components */
+import Home from './Home';
+import Header from './Header';
+import Content from './Content';
 import Footer from "./Footer";
+import ErrorRenderer from './ErrorBoundary/ErrorRenderer';
 
 const MainContainer = styled.div`
   justify-content: center;
@@ -25,8 +25,18 @@ const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
+const ReportStyle = createGlobalStyle`
+  @page {
+    size: A4;
+    margin: 34pt 34pt 34pt 34pt;
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+    }
+  }
+`;
 
 class App extends PureComponent {
+
 
   addRoutes = () => {
     return NAV_ITEMS.map(main => {
@@ -43,6 +53,7 @@ class App extends PureComponent {
       <MainContainer>
         <InnerContainer>
           <HashRouter>
+            <ReportStyle />
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />

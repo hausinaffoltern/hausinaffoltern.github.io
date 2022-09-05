@@ -17,16 +17,21 @@ const Container = styled.div`
   padding: 0 20px 30px;
 `;
 
+const VideoContainer = styled.article`
+  @media print {
+    display: none;
+  }
+`;
+
 const Video = styled.video`
   width: 100%;
   z-index: 1000;
 `;
 
 const Image = styled.div`
-  height: 400px;
+  height: 500px;
   background-image: url(${lage});
-  background-size: 150%;
-  background-position: center center;
+  background-size: 100%;
   background-repeat: no-repeat;
   @media (max-width: 1009px) {
     height: 300px;
@@ -42,11 +47,14 @@ const Image = styled.div`
 
 const Lage = () => {
   return (<Container>
+    <VideoContainer>
+      <h3>Präsentationsvideo</h3>
+      <Video controls controlsList="nodownload"><source poster={home} src={video} type="video/mp4" /></Video>
+    </VideoContainer>
+    <h3>Lage der Liegenschaft</h3>
     <MapContainer>
       <Image />
     </MapContainer>
-    <h3>Präsentationsvideo</h3>
-    <Video controls controlsList="nodownload"><source poster={home} src={video} type="video/mp4" /></Video>
     </Container>
   );
 };
