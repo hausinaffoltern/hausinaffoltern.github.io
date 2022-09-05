@@ -116,7 +116,7 @@ const Home = () => {
       <Content>
         {/*<VideoContainer><Video autoPlay loop muted><source poster={home} src={homevideo} type="video/mp4" /></Video></VideoContainer>*/}
         <Image />
-        <h2>Reihenfamilienhaus in die glückliche Erlenweg</h2>
+        <h2>Reihenfamilienhaus am famielienfreundlichen und ruhigen Erlenweg</h2>
         <MainArticle itemscope itemtype="https://schema.org/Offer">
         <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage ein fein saniertes Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse</p>
         </MainArticle>
