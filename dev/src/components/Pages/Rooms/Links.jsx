@@ -151,7 +151,7 @@ const Links = ({ level, onClick }) => {
   return (
     <>
       {hotspots[level].map(({t,l,nr}) => {
-        return <Spot key={`${level}${nr}`}onClick={() => onClick(nr)} t={t} l={l} />
+        return <Spot key={`${level}${nr}`}onClick={() => onClick(nr, level)} t={t} l={l} />
       }) }
     </>
   );

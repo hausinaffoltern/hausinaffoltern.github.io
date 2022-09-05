@@ -136,12 +136,9 @@ const Header = () => {
             </SubNavigation>
         </NavItem>
         <NavItem>
-            <Link to="/zimmer/eg">
+            <Link to="/zimmer">
                 Räume
             </Link>
-            <SubNavigation>
-                <NavItems main="zimmer" />
-            </SubNavigation>
         </NavItem>
         <NavItem>
             <Link to="/umgebung/lage">

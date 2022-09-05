@@ -15,10 +15,7 @@ import Lage from '../Pages/Lage';
 import Gemeinde from '../Pages/Gemeinde';
 import Infrastruktur from '../Pages/Infrastruktur';
 import Privacy from '../Pages/Privacy';
-import Eg from '../Pages/Rooms/Eg';
-import Ug from '../Pages/Rooms/Ug';
-import Dg from '../Pages/Rooms/Dg';
-import Og from '../Pages/Rooms/Og';
+import Rooms from '../Pages/Rooms';
 import Facts from '../Pages/Facts';
 
 const navItems = [
@@ -52,34 +49,7 @@ const navItems = [
     {
       key: 'zimmer',
       value: 'Räume',
-      component: <p>Räume</p>,
-      //video: rooms,
-      submenu: [
-        {
-          key: 'eg',
-          value: 'Erdgeschoss',
-          shortvalue: 'EG',
-          component: <Eg />,
-        },
-        {
-          key: 'og',
-          value: 'Obergeschoss',
-          shortvalue: 'OG',
-          component: <Og />,
-        },
-        {
-          key: 'dg',
-          value: 'Dachgeschoss',
-          shortvalue: 'DG',
-          component: <Dg />,
-        },
-        {
-          key: 'ug',
-          value: 'Untergeschoss',
-          shortvalue: 'UG',
-          component: <Ug />,
-        },
-      ]
+      component: <Rooms />,
     },
     {
       key: 'umgebung',

@@ -6,7 +6,7 @@ import { getSource, getSrc } from '../../common/vr';
 
 const Content = styled.div`
   padding: 10px;
-  h3 {
+  h3 span {
     @media print {
       display: none;
     }
@@ -36,7 +36,7 @@ const Og = () => {
   
   return (
     <Content>
-      <h3>Virtuelle Besichtigung</h3>
+      <h3>Obergeschoss<span> - Virtuelle Besichtigung</span></h3>
       <FsLightbox
         toggler={lightboxController.toggler}
         sources={sources}

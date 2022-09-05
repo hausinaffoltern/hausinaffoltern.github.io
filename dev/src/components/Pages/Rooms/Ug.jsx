@@ -6,7 +6,7 @@ import FsLightbox from 'fslightbox-react';
 
 const Content = styled.div`
   padding: 10px;
-  h3 {
+  h3 span {
     @media print {
       display: none;
     }
@@ -38,7 +38,7 @@ const Ug = () => {
 
   return (
     <Content>
-      
+      <h3>Untergeschoss</h3>
       <FsLightbox
         toggler={lightboxController.toggler}
         sources={[]}
