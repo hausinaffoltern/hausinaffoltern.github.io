@@ -108,7 +108,7 @@ const Facts = () => {
         <h3>Flachen</h3>
         <Dl>
           <Dt>Nettowohnfläche</Dt>   <Dd>168m²</Dd>
-          <Dt>Grundstücksfläche</Dt>   <Dd>205m²</Dd>
+          <Dt>Grundstücksfläche</Dt>   <Dd>218m²</Dd>
           <Dt>Gesamtnutzfläche</Dt>   <Dd>220m²</Dd>
           <Dt>Gebäudevolumen</Dt>   <Dd>678m³</Dd>
         </Dl>

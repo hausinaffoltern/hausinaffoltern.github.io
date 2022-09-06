@@ -269,7 +269,7 @@ const Home = () => {
             </FactImage>
             <div>
             <h3>{translations('land', language)}</h3>
-            <p>205 m²</p>
+            <p>218 m²</p>
             </div>
           </Fact>
         </Facts>
