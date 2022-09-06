@@ -31,7 +31,7 @@ export const vr = [
 
     {
         key: 'eg',
-        value: '3d63a0b2b7fd44f0aa0542e29f300d20',
+        value: '5302ffc76a0f4e7682155d462b871e9e',
     },
     {
         key: 'eg_kuche',
@@ -69,11 +69,11 @@ export const vr = [
     },
     {
         key: 'og_schlafzimmer1',
-        value: '02f25c3b668547d39f3c365b3b61786d',
+        value: 'ddca82ee7eeb44a1862c54b4ed440747',
     },
     {
         key: 'og_schlafzimmer2',
-        value: 'e63144c3b5cc4fcebc3ac6ca0d215aa3',
+        value: 'e600d4663fb448c4ab4e6046219ed83e',
     },
 ];
 const getBaseUrl = code => `https://momento360.com/e/u/${code}?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium`;
