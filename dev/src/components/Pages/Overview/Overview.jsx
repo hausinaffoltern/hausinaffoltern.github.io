@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
+import translations from "../../common/translations";
+import { LanguageContext } from '../../../hooks/useStore';
 
 const Container = styled.article`
   width: calc(100% - 40px);
@@ -35,26 +37,24 @@ const Ul = styled.ul`
     margin-left: 20px;
     padding: 0;
     list-style-type: square;
+    li {
+      line-height: 22px;
+    }
   }
 }
 `;
 
 const Overview = () => {
+  const { language, dispatch } = useContext(LanguageContext);
+  if(!language || !dispatch) {
+    return <></>;
+  }
   return (
     <Container>
-      <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage unser fein saniertes Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse.</p>
-      <h3>Die Vorteile dieser Liegenschaft vermögen zu überzeugen:</h3>
+      <p>{translations('header', language)}</p>
+      <h3>{translations('advantagestitle', language)}</h3>
       <Ul>
-        <li>Im Dreieck von Zürich, Zug und Luzern</li>
-        <li>Autobahnanschluss 5 Min</li>
-        <li>Optimale Verkehrsverbindung: Postauto Nr 200 direkt nach Zürich 7 Min, Postauto Nr 225 zum Bahnhof 1 Min, Bahnhof 13 Min zu Fuss (Fahrzeit zum Zürich HB 25 Min, Zug 15 Min)</li>
-        <li>Vollständige Infrastruktur: Schule und Kindergarten 2 Min, Einkaufsmöglichkeiten zu Fuss 7 Min, Bau- und Möbelmärkte in der Stadt, Freibad 1 Min</li>
-        <li>220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume und 4 Geschosse</li>
-        <li>Offener, heller Wohn- und Essbereich mit direktem Zugang zum Gartensitzplatz</li>
-        <li>Vollständig renoviert</li>
-        <li>Zwei Badezimmer und ein Gäste WC</li>
-        <li>Grosszügiger, schön ausgebauter Dachstock bietet viel Platz</li>
-        <li>Ein Ausserparkplatz direkt vor dem Haus</li>
+      {translations('advantages', language)}
       </Ul>
     </Container>
   )

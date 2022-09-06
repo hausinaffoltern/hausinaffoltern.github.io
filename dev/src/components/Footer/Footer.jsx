@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
+import translations from "../common/translations";
+import { LanguageContext } from '../../hooks/useStore';
 
 const BottomContainer = styled.div`
   text-align: center;
@@ -27,9 +29,13 @@ const DSConttainer = styled.span`
 `;
 
 const Footer = () => {
+  const { language, dispatch } = useContext(LanguageContext);
+  if(!language || !dispatch) {
+    return <></>;
+  }
   return (
     <BottomContainer>
-      <p> hausinaffoltern.online &copy; <DSConttainer>| <Link to="datenschutz">Datenschutzerklärung</Link> |</DSConttainer> <Link
+      <p> hausinaffoltern.online &copy; <DSConttainer>| <Link to="datenschutz">{translations('privacy', language)}</Link> |</DSConttainer> <Link
             to='#'
             onClick={(e) => {
                 window.location.href = "mailto:info@hausinaffoltern.online?subject=Anfrage von Haus in Affoltern am Albis | hausinaffoltern.online";

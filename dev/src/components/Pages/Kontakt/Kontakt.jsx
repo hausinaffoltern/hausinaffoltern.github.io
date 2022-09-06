@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useContext, useState} from 'react';
 import styled from 'styled-components';
 import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 import Button from '@mui/joy/Button';
 import TextField from '@mui/joy/TextField';
 import Textarea from '@mui/joy/Textarea';
+import translations from "../../common/translations";
+import { LanguageContext } from '../../../hooks/useStore';
 
 const Box = styled.div`
   display: flex;
@@ -16,12 +17,15 @@ const Box = styled.div`
 
 const Content = styled.div`
   background: #fff;
+  display: flex;
+  flex-direction: column;
   padding: 0 20px 30px;
+  width: calc(100% - 40px);
 `;
 
-const InlineLink = styled(Link)`
-  color: #676;
-  text-decoration: none;
+const Form = styled.form`
+  display: block;
+  width: 100%;
 `;
 
 const Printcontent = styled.article`
@@ -33,19 +37,7 @@ display: none;
 `; 
 const Normalcontent = styled.article`
 display: flex;
-@media print {
-  display: none;
-}
-`; 
-
-const Printspan = styled.span`
-display: none;
-@media print {
-  display: inline;
-}
-`; 
-const Normalspan = styled.span`
-display: inline;
+width: 100%;
 @media print {
   display: none;
 }
@@ -108,7 +100,6 @@ const mantineTheme = extendTheme({
 });
 
 const Kontakt = () => {
-
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
@@ -182,13 +173,18 @@ const Kontakt = () => {
     return <></>
   }
 
+  const { language } = useContext(LanguageContext);
+  if(!language) {
+    return <></>;
+  }
+
   const renderForm = () => (
-    <form name="gform" id="gform" encType="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSej95Gy_9ssJRkxTddID663U3kE0_3XGXXS5auMcGNJ3xINJg/formResponse?" target="hidden_iframe" onSubmit={onSubmit}>
+    <Form name="gform" id="gform" encType="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSej95Gy_9ssJRkxTddID663U3kE0_3XGXXS5auMcGNJ3xINJg/formResponse?" target="hidden_iframe" onSubmit={onSubmit}>
       <Box>
         <TextField
           size="md"
           autoComplete="given-name"
-          placeholder="Vorname"
+          placeholder={translations('firstname', language)}
           name="entry.1183541095" id="entry.1183541095"
           error={!!error.firstname}
           value={firstname}
@@ -198,7 +194,7 @@ const Kontakt = () => {
         <TextField
           size="md"
           autoComplete="family-name"
-          placeholder="Nachname"
+          placeholder={translations('lastname', language)}
           name="entry.792893174" id="entry.792893174"
           value={lastname}
           error={!!error.lastname}
@@ -212,7 +208,7 @@ const Kontakt = () => {
         <TextField
           size="md"
           autoComplete="email"
-          placeholder="E-mail Adresse"
+          placeholder={translations('email', language)}
           name="entry.1950217878" id="entry.1950217878"
           value={email}
           error={!!error.email}
@@ -222,7 +218,7 @@ const Kontakt = () => {
         <TextField
           size="md"
           autoComplete="tel"
-          placeholder="Telefon"
+          placeholder={translations('phone', language)}
           value={phone}
           name="entry.421001964" id="entry.421001964"
           error={!!error.phone}
@@ -235,28 +231,29 @@ const Kontakt = () => {
           name="entry.2020080612" id="entry.2020080612"
           minRows={3}
           size="md"
-          placeholder="Nachricht"
+          placeholder={translations('message', language)}
           onChange={e => onChange(e,setComment, 'comment')}
         >
           {comment}
         </Textarea>
       </Box>
       <div>
-      Mit dem Senden dieser Anfrage stimme ich zu, dass hausinaffoltern.online meine Daten wie in die&nbsp;<InlineLink to="/datenschutz">Datenschutzerklärung</InlineLink>&nbsp;beschrieben verarbeiten darf.
+        {translations('legal', language)}
+      
       </div>
       <Box>
-        <Button type="submit">Anfrage senden</Button>
+        <Button type="submit" size="lg">{translations('send', language)}</Button>
       </Box>
-    </form>
+    </Form>
   );
 
   return (
     <Content>
-      <p>Falls Sie Interesse haben und einen Besichtigungstermin vereinbaren möchten, bitte kontaktieren Sie uns via untenstehende<Printspan>n Erreichbarkeiten</Printspan><Normalspan>m Kontaktformular</Normalspan>.</p>
+      <p>{translations('contacttext', language)}</p>
       <CssVarsProvider theme={mantineTheme}>
       <Printcontent>
-        <h3>Telefon: +41 78 945 35 96</h3>
-        <h3>E-mail Adresse: info@hausinaffoltern.online</h3>
+        <h3>{translations('phone', language)}: +41 78 945 35 96</h3>
+        <h3>{translations('email', language)}: info@hausinaffoltern.online</h3>
       </Printcontent>
       <Normalcontent>
         {submitted ? <SubmittedContent><h1>Danke!<br />Ihre Nachricht ist zugeschickt.</h1></SubmittedContent> : renderForm()}

@@ -1,6 +1,4 @@
 import React from 'react';
-// import bg from '../../assets/bg.jpg'
-// import home from '../../assets/home.jpg'
 import gemeinde from '../../assets/gemeinde.jpg'
 import kontakt from '../../assets/kontakt.jpg'
 import lage from '../../assets/lage.jpg'
@@ -21,26 +19,25 @@ import Facts from '../Pages/Facts';
 const navItems = [
     {
       key: 'haus',
-      value: 'Das Haus',
-      component: <p>HAUS</p>,
+      value: 'navhaus',
       submenu: [
         {
           key: 'beschreibung',
-          value: 'Beschreibung',
+          value: 'navoverview',
           image: beschreibung,
           component: <Overview />,
         },
         {
           key: 'renovierungen',
-          value: 'Renovierungen',
-          shortvalue: 'Sanierung',
+          value: 'navrenovation',
+          shortvalue: 'navrenovation_short',
           image: renovierungen,
           component: <Renovation />,
         },
         {
           key: 'detailbeschrieb',
-          value: 'Detailbeschrieb',
-          shortvalue: 'Fakten',
+          value: 'navdetails',
+          shortvalue: 'navdetails_short',
           image: detailbeschrieb,
           component: <Facts />,
         },
@@ -48,48 +45,47 @@ const navItems = [
     },
     {
       key: 'zimmer',
-      value: 'Räume',
+      value: 'navrooms',
       component: <Rooms />,
     },
     {
       key: 'umgebung',
       value: 'Umgebung',
-      component: <p>Umgebung</p>,
       image: kontakt,
       submenu: [
         {
           key: 'lage',
-          value: 'Lage',
+          value: 'navposition',
           image: lage,
           component: <Lage />,
         },
         {
           key: 'gemeinde',
-          value: 'Gemeinde',
+          value: 'navcommunity',
           image: gemeinde,
           component: <Gemeinde />,
         },
         {
           key: 'infrastruktur',
-          value: 'Infrastruktur',
+          value: 'navinfra',
           component: <Infrastruktur />,
         },
       ]
     },
     {
       key: 'gallery',
-      value: 'Fotos',
+      value: 'navphotos',
       component: <Photos />,
     },
     {
       key: 'kontakt',
-      value: 'Kontakt',
+      value: 'navcontact',
       image: kontakt,
       component: <Kontakt />
     },
     {
       key: 'datenschutz',
-      value: ' Datenschutzerklärung',
+      value: 'navprivacy',
       component: <Privacy />
     },
   ];

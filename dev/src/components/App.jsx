@@ -3,6 +3,7 @@ import {
 } from "react-router-dom";
 import React, { PureComponent } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import LanguageContextProvider from '../hooks/useStore';
 
 import NAV_ITEMS from './common/Sitemap';
 /* components */
@@ -50,6 +51,7 @@ class App extends PureComponent {
 
   render() {
     return (
+      <LanguageContextProvider>
       <MainContainer>
         <InnerContainer>
           <HashRouter>
@@ -64,6 +66,7 @@ class App extends PureComponent {
           </HashRouter>
         </InnerContainer>
       </MainContainer>
+      </LanguageContextProvider>      
     );
   }
 }

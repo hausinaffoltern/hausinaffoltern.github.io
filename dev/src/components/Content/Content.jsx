@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NavItems from '../Header/NavItems';
 import NAV_ITEMS from '../common/Sitemap';
 import styled from 'styled-components';
+import translations from "../common/translations";
+import { LanguageContext } from '../../hooks/useStore';
 
 const Container = styled.div`
   background: #fff;
@@ -59,32 +61,6 @@ const LeftNav = styled.ul`
   }
 `;
 
-/*const VideoContainer = styled.div`
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-  margin: 10px;
-  &::after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(220,220,200,.7);
-    z-index: 1001;
-  }
-`;
-
-const Video = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000;
-`;*/
-
 const Image = styled.div`
   height: 400px;
   background-image: url(${props => props.bg});
@@ -110,15 +86,19 @@ const Image = styled.div`
 `;
 
 const Content = ({main, sub}) => {
+  const { language } = useContext(LanguageContext);
+  if(!language) {
+    return <></>;
+  }
+  
   const currentMain = NAV_ITEMS.find(item => item.key === main) || {};
   const current = currentMain.submenu && currentMain.submenu.length ? currentMain.submenu.find(item => sub === item.key) : {};
   const renderContent = () => current.component || currentMain.component || <>no comp</>
-  const subtitle = current.value || currentMain.value || '';
+  const subtitle = translations(current.value, language) || translations(currentMain.value, language) || '';
 
   const Img = ({src, title, page}) => <Image bg={src} page={page}><img src={src} alt={title} /></Image>
   return (
     <Container>
-      {/*currentMain.video && <VideoContainer><Video autoPlay loop muted><source poster={currentMain.image} src={currentMain.video} type="video/mp4" /></Video></VideoContainer>*/}
       {(current.image && <Img page={current.key} src={current.image} title={current.value} />) || (currentMain.image && <Img page={currentMain.key} src={currentMain.image} title={currentMain.value} />)}
       <h2>{subtitle}</h2>
       <ContentContainer>

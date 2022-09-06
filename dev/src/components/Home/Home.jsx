@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import home from '../../assets/home.jpg'
 import share from '../../assets/share.jpg'
 // import homevideo from '../../assets/homevideo.mp4'
@@ -10,6 +10,8 @@ import { FiFlag } from "react-icons/fi";
 import Floor from "../../assets/floorplan.svg";
 import Excavator from "../../assets/excavator.svg";
 import Land from "../../assets/land.svg";
+import translations from "../common/translations";
+import { LanguageContext } from '../../hooks/useStore';
 
 const Content = styled.main`
   background: #fff;
@@ -110,6 +112,7 @@ const Fact = styled.article`
   display: flex;
   justify-content: left;
   width: 300px;
+  min-height: 105px;
   padding: 30px 0;
   h3 {
     margin: 0;
@@ -125,8 +128,18 @@ const Fact = styled.article`
   }
   @media print {
     padding: 14px 0;
+    height: 85px;
+  }
+  @media (max-width: 679px) {
+    min-height: 40px;
   }
 `;
+
+const PFact = styled(Fact)`
+  @media print {
+    display: none;
+  }
+`
 
 const H2 = styled.h2`
   @media print {
@@ -157,14 +170,18 @@ const FactImage = styled.div`
 
 const Home = () => {
 
+  const { language } = useContext(LanguageContext);
+  if(!language) {
+    return <></>;
+  }
+
   return (
     <>
       <Content>
-        {/*<VideoContainer><Video autoPlay loop muted><source poster={home} src={homevideo} type="video/mp4" /></Video></VideoContainer>*/}
         <Image><img alt="Reihenfamilienhaus am famielienfreundlichen und ruhigen Erlenweg" src={share} /></Image>
-        <H2>Reihenfamilienhaus am famielienfreundlichen und ruhigen Erlenweg</H2>
+        <H2>{translations('h2', language)}</H2>
         <MainArticle itemscope itemtype="https://schema.org/Offer">
-        <p>In Affoltern am Albis verkaufen wir an ruhiger Quartierlage unser fein saniertes Reihenmittelhaus mit sehr grosszügigen Platzverhältnissen. 220 m² Gesamtnutzfläche verteilt auf 6.5 Zimmer, Nebenräume, Balkonen, Gartensitzplatz und 4 Geschosse</p>
+        <p>{translations('header', language)}</p>
         </MainArticle>
         <Facts>
           <Fact>
@@ -172,26 +189,26 @@ const Home = () => {
               <MdOutlinePlace />
             </FactImage>
             <div>
-            <h3>Adresse</h3>
-            <p>Erlenweg 4, 8910<br />Affoltern am Albis, Schweiz</p>
+            <h3>{translations('address', language)}</h3>
+            <p>{translations('addressv', language)}</p>
             </div>
           </Fact>
-          <Fact>
+          <PFact>
             <FactImage>
               <BsHouse />
             </FactImage>
             <div>
-            <h3>Objektart</h3>
-            <p>Reihenfamilienhaus</p>
+            <h3>{translations('object', language)}</h3>
+            <p>{translations('objectv', language)}</p>
             </div>
-          </Fact>
+          </PFact>
           <Fact>
             <FactImage>
               <BsPiggyBank />
             </FactImage>
             <div>
-            <h3>Verkaufspreis</h3>
-            <p>CHF 1'450'000.-</p>
+            <h3>{translations('price', language)}</h3>
+            <p>{translations('pricev', language)}</p>
             </div>
           </Fact>
           <Fact>
@@ -199,7 +216,7 @@ const Home = () => {
               <HiOutlineCalendar />
             </FactImage>
             <div>
-            <h3>Verfügbar ab</h3>
+            <h3>{translations('available', language)}</h3>
             <p>November 2022</p>
             </div>
           </Fact>
@@ -211,7 +228,7 @@ const Home = () => {
               </FloorPlan>
             </FactImage>
             <div>
-            <h3>Nettowohnfläche</h3>
+            <h3>{translations('space', language)}</h3>
             <p>168 m²</p>
             </div>
           </Fact>
@@ -220,7 +237,7 @@ const Home = () => {
               <BsDoorClosed />
             </FactImage>
             <div>
-            <h3>Zimmer</h3>
+            <h3>{translations('rooms', language)}</h3>
             <p>6.5</p>
             </div>
           </Fact>
@@ -229,7 +246,7 @@ const Home = () => {
               <FiFlag />
             </FactImage>
             <div>
-            <h3>Baujahr</h3>
+            <h3>{translations('year', language)}</h3>
             <p>1979</p>
             </div>
           </Fact>
@@ -240,7 +257,7 @@ const Home = () => {
               </Renovation>
             </FactImage>
             <div>
-            <h3>Letzte renovation</h3>
+            <h3>{translations('renovation', language)}</h3>
             <p>2021</p>
             </div>
           </Fact>
@@ -251,7 +268,7 @@ const Home = () => {
               </Fence>
             </FactImage>
             <div>
-            <h3>Grundstücksfläche</h3>
+            <h3>{translations('land', language)}</h3>
             <p>205 m²</p>
             </div>
           </Fact>

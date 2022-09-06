@@ -1,7 +1,10 @@
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import styled from 'styled-components';
 import NAV_ITEMS from '../common/Sitemap';
+import translations from "../common/translations";
+import { LanguageContext } from '../../hooks/useStore';
+
 
 const NavItem = styled.li`
   display: flex;
@@ -24,19 +27,27 @@ const NavItem = styled.li`
   }
 `;
 
-const NavItems = ({main, active}) => (
-  <>
-    {NAV_ITEMS.find(item => item.key === main).submenu.map(({key,value, shortvalue}) => (
-      <NavItem key={key} active={active === key}>
-          <Link className="big" to={`/${main}/${key}`}>
-              {value}
-          </Link>
-          <Link className="small" to={`/${main}/${key}`}>
-              {shortvalue || value}
-          </Link>
-      </NavItem>
-    ))}
-  </>
-);
+const NavItems = ({main, active}) => {
+  const { language } = useContext(LanguageContext);
+  if(!language) {
+    return <></>;
+  }
+  //value: language && translations('navoverview', language),
+
+  return (
+    <>
+      {NAV_ITEMS.find(item => item.key === main).submenu.map(({key,value, shortvalue}) => (
+        <NavItem key={key} active={active === key}>
+            <Link className="big" to={`/${main}/${key}`}>
+                {translations(value, language)}
+            </Link>
+            <Link className="small" to={`/${main}/${key}`}>
+                {translations(shortvalue, language) || translations(value, language)}
+            </Link>
+        </NavItem>
+      ))}
+    </>
+  )
+};
 
 export default NavItems;
