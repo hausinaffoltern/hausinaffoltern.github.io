@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
+import translations from "../../common/translations";
+import { LanguageContext } from '../../../hooks/useStore';
 
 const Container = styled.div`
   width: calc(100% - 40px);
@@ -48,50 +50,35 @@ const Ul = styled.ul`
 `;
 
 const Renovation = () => {
+  const { language, dispatch } = useContext(LanguageContext);
+  if(!language || !dispatch) {
+    return <></>;
+  }
   return (
     <Container>
       <h3>2016</h3>
       <Ul>
-      <li>Umbau Eingang und Küche</li>
-      <li>Badezimmersanierung OG</li>
-      <li>Neues Badezimmer DG</li>
-      <li>Neues Dachfenster + Aussenrolladen mit Solarbetrieb und Fernbedienung Badezimmer DG</li>
-      <li>Boden ersetzen EG und DG</li>
-      <li>Komplettes Streichen</li>
+      {translations('r2016', language)}
       </Ul>
       <h3>2017</h3>
       <Ul>
-      <li>Fenster ersetzen EG</li>
-      <li>Lamellenstoren mit Fernbedienung EG ung DG</li>
-      <li>Heizungsanierung</li>
-      <li>Gartenumbau</li>
+      {translations('r2017', language)}
       </Ul>
       <h3>2018</h3>
       <Ul>
-      <li>Terassenüberdachung EG</li>
-      <li>Gartensitzplatz sanieren, Bambusdielen verlegen</li>
-      <li>Aussenparkplatz renovieren</li>
-      <li>Wasserhauptleitung ersetzen</li>
+      {translations('r2018', language)}
       </Ul>
       <h3>2019</h3>
       <Ul>
-      <li>Wohnzimmer Wandverkleidung mit Naturstein und Licht</li>
-      <li>Boden ersetzen OG</li>
-      <li>Fenster ersetzen OG</li>
-      <li>Lamellenstoren mit Fernbedienung OG</li>
+      {translations('r2019', language)}
       </Ul>
       <h3>2020</h3>
       <Ul>
-      <li>Wasserverteiler im Keller</li>
-      <li>Radiatoren ersetzen</li>
-      <li>Gäste WC komplette Sanierung</li>
-      <li>Trennwand mit Schiebetür DG</li>
+      {translations('r2020', language)}
       </Ul>
       <h3>2021</h3>
       <Ul>
-      <li>Lukarnenverkleidung Fenster DG</li>
-      <li>Dachfenster ersetzen + Aussenrolladen mit Solarbetrieb und Fernbedienung</li>
-      <li>Treppen EG-OG ersetzen</li>
+      {translations('r2021', language)}
       </Ul>
     </Container>
   );

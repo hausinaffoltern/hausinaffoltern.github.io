@@ -73,6 +73,31 @@ const translations = {
         <li>Grosszügiger, schön ausgebauter Dachstock bietet viel Platz</li>
         <li>Ein Ausserparkplatz direkt vor dem Haus</li></>,
         privacy: 'Datenschutzerklärung',
+        r2016:<>      <li>Umbau Eingang und Küche</li>
+        <li>Badezimmersanierung OG</li>
+        <li>Neues Badezimmer DG</li>
+        <li>Neues Dachfenster + Aussenrolladen mit Solarbetrieb und Fernbedienung Badezimmer DG</li>
+        <li>Boden ersetzen EG und DG</li>
+        <li>Komplettes Streichen</li></>,
+        r2017:<>      <li>Fenster ersetzen EG</li>
+        <li>Lamellenstoren mit Fernbedienung EG ung DG</li>
+        <li>Heizungsanierung</li>
+        <li>Gartenumbau</li></>,
+        r2018:<>      <li>Terrassenüberdachung EG</li>
+        <li>Gartensitzplatz sanieren, Bambusdielen verlegen</li>
+        <li>Aussenparkplatz renovieren</li>
+        <li>Wasserhauptleitung ersetzen</li></>,
+        r2019:<>      <li>Wohnzimmer Wandverkleidung mit Naturstein und Licht</li>
+        <li>Boden ersetzen OG</li>
+        <li>Fenster ersetzen OG</li>
+        <li>Lamellenstoren mit Fernbedienung OG</li></>,
+        r2020:<>      <li>Wasserverteiler im Keller</li>
+        <li>Radiatoren ersetzen</li>
+        <li>Gäste WC komplette Sanierung</li>
+        <li>Trennwand mit Schiebetür DG</li></>,
+        r2021:<><li>Lukarnenverkleidung Fenster DG</li>
+        <li>Dachfenster ersetzen + Aussenrolladen mit Solarbetrieb und Fernbedienung</li>
+        <li>Treppen EG-OG ersetzen</li></>,
     },
     en: {
         h1: 'House in Affoltern am Albis',
@@ -125,6 +150,32 @@ const translations = {
         <li>Generous, beautifully developed attic offers plenty of space</li>
         <li>An outdoor parking space directly in front of the house</li></>,
         privacy: 'Privacy policy',
+        r2016:<><li>New entrance and kitchen</li>
+        <li>Bathroom renovation first floor</li>
+        <li>New bathroom attic</li>
+        <li>New roof window + external roller shutters with solar power and remote control attic bathroom</li>
+        <li>New parquet ground floor and attic</li>
+        <li>Sanitary painting</li></>,
+        r2017:<><li>Window replacement ground floor</li>
+        <li>Roller shutters with remote control ground floor and attic</li>
+        <li>Heating renovation</li>
+        <li>Gardening</li></>,
+        r2018:<><li>New Terrace roof</li>
+        <li>Renovating the garden floor, laying bamboo floorboards</li>
+        <li>Renovate outdoor parking lot</li>
+        <li>Replace main water pipes</li></>,
+        r2019:<><li>Living room wall cladding with natural stone and light</li>
+        <li>New parquet first floor</li>
+        <li>Window replacement first floor</li>
+        <li>Roller shutters with remote control first floor</li></>,
+        r2020:<><li>New water distributor in the basement</li>
+        <li>Radiator replacement</li>
+        <li>Guest toilet complete renovation</li>
+        <li>New room establishment in the attic with sliding door</li></>,
+        r2021:<>
+        <li>Dormer window isolation and cover in the attic</li>
+       <li>Roof window replacement + external roller shutters with solar power and remote control</li>
+       <li>Stairs renovation ground floor - first floor</li></>,
     },
 };
 
