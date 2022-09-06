@@ -98,6 +98,7 @@ const translations = {
         r2021:<><li>Lukarnenverkleidung Fenster DG</li>
         <li>Dachfenster ersetzen + Aussenrolladen mit Solarbetrieb und Fernbedienung</li>
         <li>Treppen EG-OG ersetzen</li></>,
+        keydata: 'Eckdaten',
     },
     en: {
         h1: 'House in Affoltern am Albis',
@@ -176,6 +177,7 @@ const translations = {
         <li>Dormer window isolation and cover in the attic</li>
        <li>Roof window replacement + external roller shutters with solar power and remote control</li>
        <li>Stairs renovation ground floor - first floor</li></>,
+       keydata: 'Key data',
     },
 };
 

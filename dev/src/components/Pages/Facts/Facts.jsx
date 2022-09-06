@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
+import translations from "../../common/translations";
+import { LanguageContext } from '../../../hooks/useStore';
 
 const Container = styled.div`
   width: calc(100% - 40px);
@@ -86,10 +88,14 @@ const Ul = styled.ul`
 `;
 
 const Facts = () => {
+  const { language, dispatch } = useContext(LanguageContext);
+  if(!language || !dispatch) {
+    return <></>;
+  }
   return (
     <Container>
       <Content>
-        <h3>Eckdaten</h3>
+        <h3>{translations('keydata', language)}</h3>
         <Dl>
           <Dt>Verfügbar ab</Dt>   <Dd>November 2022</Dd>
           <Dt>Zimmer</Dt>   <Dd>6.5</Dd>
