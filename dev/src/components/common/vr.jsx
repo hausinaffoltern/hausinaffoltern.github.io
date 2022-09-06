@@ -69,7 +69,7 @@ export const vr = [
     },
     {
         key: 'og_schlafzimmer1',
-        value: 'b4596d765ef14fc7b6b7fe0a66920f0a',
+        value: '02f25c3b668547d39f3c365b3b61786d',
     },
     {
         key: 'og_schlafzimmer2',
