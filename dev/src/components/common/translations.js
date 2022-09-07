@@ -2,6 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const Linka = styled.a`
+  text-decoration: none;
+  color: #464;
+`;
+
 const InlineLink = styled(Link)`
   color: #676;
   text-decoration: none;
@@ -51,6 +56,8 @@ const translations = {
         year: 'Baujahr',
         renovation: 'Letzte renovation',
         land: 'Grundstücksfläche',
+        landsum: 'Gesamtnutzfläche',
+        volume: 'Gebäudevolumen',
         contacttext: <>Falls Sie Interesse haben und einen Besichtigungstermin vereinbaren möchten, bitte kontaktieren Sie uns via untenstehende<Printspan>n Erreichbarkeiten</Printspan><Normalspan>m Kontaktformular</Normalspan>.</>,
         firstname: 'Vorname',
         lastname: 'Nachname',
@@ -71,7 +78,7 @@ const translations = {
         <li>Vollständig renoviert</li>
         <li>Zwei Badezimmer und ein Gäste WC</li>
         <li>Grosszügiger, schön ausgebauter Dachstock bietet viel Platz</li>
-        <li>Ein Ausserparkplatz direkt vor dem Haus</li></>,
+        <li>Ein Aussenparkplatz direkt vor dem Haus, gemieteter Garagenplatz kann übernommen werden</li></>,
         privacy: 'Datenschutzerklärung',
         r2016:<>      <li>Umbau Eingang und Küche</li>
         <li>Badezimmersanierung OG</li>
@@ -99,6 +106,47 @@ const translations = {
         <li>Dachfenster ersetzen + Aussenrolladen mit Solarbetrieb und Fernbedienung</li>
         <li>Treppen EG-OG ersetzen</li></>,
         keydata: 'Eckdaten',
+        bathroom: 'Badezimmer',
+        heating: 'Wärmeerzeugung',
+        heatdistribution: 'Wärmeverteilung',
+        heatingv: 'Ölheizung',
+        heatdistributionv: 'Radiatoren',
+        offer: 'Angebot',
+        surface: 'Flächen',
+        character: 'Eigenschaften',
+        characteristics1: <><li>Komplett saniert</li>
+        <li>Ruhig</li>
+        <li>Schule und Kindergarten</li>
+        <li>Kinderfreundlich</li>
+        <li>Sonnig</li></>,
+       characteristics2: <>
+       <li>Privatweg</li>
+        <li>Sportanlagen</li>
+        <li>Haustiere erlaubt</li>
+        <li>Verkehrsverbindung</li>
+        <li>Freibad</li></>,
+       gemeinde: <><p>8910 Affoltern am Albis liegt im Bezirk Knonaueramt, im Kanton Zürich. </p>
+
+       <p>In Affoltern am Albis neben traditionsverbundenen Unternehmen neue, moderne Firmen und Geschäfte Platz gefunden, die das Regionalzentrum weitherum bekannt machen. Affoltern am Albis ist Sitz verschiedener öffentlicher Einrichtungen und Dienste, die sich gegenseitig ergänzen und ein Netz sozialer Sicherheit bieten. Für die Freizeitgestaltung stehen ein Freibad und Sportanlagen sowie über 100 Vereine zur Verfügung.</p>
+   
+       <p>Die Gemeinde Affoltern am Albis wurde per 1. Juli 2018 zur Stadt Affoltern am Albis. Auch wenn man in Affoltern am Albis nicht mehr die einstige ländliche Idylle vorfindet, bietet der Ort seinen über 12'000 Einwohnern mit seiner sonnigen, zentralen Lage zwischen den Metropolen Zürich, Zug und Luzern, den guten Verkehrsverbindungen und den grösstenteils gut in die Landschaft eingefügten Überbauungen, dem vielen Grün und der unüberbaubaren Umgebung eine vorzügliche Wohnqualität und eine ansprechende Umwelt.</p></>,
+      morefacts: <>Mehrere Fakten über Affoltern a.A: <Linka href="https://www.raiffeisen.ch/rch/de/privatkunden/hypotheken/gemeindeinfo.affoltern-am-albis.html" target="_blank">hier</Linka></>,
+      school: 'Schule and Kindergarten',
+      primary: 'Primarschule',
+      secondary: 'Sekundarschule',
+      nursery: 'Kindergarten',
+      shopping: 'Einkaufsmöglichkeiten',
+      transport: 'Öffentliche Verkehr',
+      train: 'Zug',
+      motorway: 'Autobahn',
+      eg: 'Erdgeschoss',
+      og: 'Obergeschoss',
+      dg: 'Dachgeschoss',
+      ug: 'Untergeschoss',
+      vt: 'Virtuelle Besichtigung',
+      sg: 'Sonstiges',
+      docs: 'Klicken Sie hier, um Verkaufsmaterial herunterzuladen',
+      doclink: 'reihenfamilienhaus_affoltern',
     },
     en: {
         h1: 'House in Affoltern am Albis',
@@ -130,6 +178,8 @@ const translations = {
         year: 'Construction year',
         renovation: 'Last renovation',
         land: 'Land area',
+        landsum: 'Total usable area',
+        volume: 'Building volume',
         contacttext: <>If you are interested and would like to arrange a viewing appointment, please contact us using <Printspan>one of the following availabilities</Printspan><Normalspan>the contact form below</Normalspan>.</>,
         firstname: 'Firstname',
         lastname: 'Lastname',
@@ -149,7 +199,7 @@ const translations = {
         <li>Fully renovated</li>
         <li>Two bathrooms and a guest toilet</li>
         <li>Generous, beautifully developed attic offers plenty of space</li>
-        <li>An outdoor parking space directly in front of the house</li></>,
+        <li>An outdoor parking space directly in front of the house, rented garage space can be taken over</li></>,
         privacy: 'Privacy policy',
         r2016:<><li>New entrance and kitchen</li>
         <li>Bathroom renovation first floor</li>
@@ -178,6 +228,48 @@ const translations = {
        <li>Roof window replacement + external roller shutters with solar power and remote control</li>
        <li>Stairs renovation ground floor - first floor</li></>,
        keydata: 'Key data',
+       bathroom: 'Bathroom',
+       heating: 'Heat generation',
+       heatdistribution: 'Heat distribution',
+       heatingv: 'Oil heating',
+       heatdistributionv: 'Radiators',
+       offer: 'Offer',
+       surface: 'Surfaces',
+       character: 'Characteristics',
+       characteristics1: <>
+       <li>Completely renovated</li>
+       <li>Quiet</li>
+       <li>School and Kindergarten</li>
+       <li>Child friendly</li>
+       <li>Sunny</li></>,
+       characteristics2: <>
+       <li>Private road</li>
+       <li>Sports facilities</li>
+       <li>Pets allowed</li>
+       <li>Transport connection</li>
+       <li>Public lido</li></>,
+       gemeinde: <><p>8910 Affoltern am Albis is located in the district of Knonaueramt in the canton of Zurich.</p>
+
+       <p>In addition to traditional companies, new, modern companies and shops have found a place in Affoltern am Albis, which make the regional center well known. Affoltern am Albis is home to various public institutions and services that complement each other and provide a social security network. An outdoor lido and sports facilities as well as over 100 clubs are available for leisure activities.</p>
+   
+       <p>The municipality of Affoltern am Albis became the town of Affoltern am Albis on July 1, 2018. Even if one no longer finds the former rural idyll in Affoltern am Albis, the place offers its more than 12,000 inhabitants with its sunny, central location between the metropolises of Zurich, Zug and Lucerne, the good transport connections and the mostly well integrated into the landscape Overbuildings, the greenery and the unbuildable environment an excellent quality of life and an appealing environment.</p></>,
+       morefacts: <>Several facts about Affoltern a.A only in german: <Linka href="https://www.raiffeisen.ch/rch/de/privatkunden/hypotheken/gemeindeinfo.affoltern-am-albis.html" target="_blank">here</Linka></>,
+       school: 'School and nursery',
+       primary: 'Primary school',
+       secondary: 'Secondary school',
+       nursery: 'Nursery',
+       shopping: 'Shopping',
+       transport: 'Public transport',
+       train: 'Train',
+       motorway: 'Motorway',
+       eg: 'Ground floor',
+       og: 'Upper floor',
+       dg: 'Attic',
+       ug: 'Basement',
+       vt: 'Virtual tour',
+       sg: 'Miscellaneous',
+       docs: 'Click here to download sales material',
+       doclink: 'rowfamilyhouse_affoltern',
     },
 };
 

@@ -252,7 +252,7 @@ const Kontakt = () => {
       <p>{translations('contacttext', language)}</p>
       <CssVarsProvider theme={mantineTheme}>
       <Printcontent>
-        <h3>{translations('phone', language)}: +41 78 945 35 96</h3>
+        <h3>Web: http://hausinaffoltern.online/#/kontakt</h3>
         <h3>{translations('email', language)}: info@hausinaffoltern.online</h3>
       </Printcontent>
       <Normalcontent>

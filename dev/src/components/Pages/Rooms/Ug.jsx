@@ -1,26 +1,6 @@
 import React, { useState } from 'react';
 import Plan from './Plan';
-import styled from 'styled-components';
 import FsLightbox from 'fslightbox-react';
-
-
-const Content = styled.div`
-  padding: 10px;
-  h3 span {
-    @media print {
-      display: none;
-    }
-  }
-`;
-
-/*const Iframe = styled.iframe`
-  position: absolute;
-  top: 30px;
-  bottom: 30px;
-  left: 30px;
-  right: 30px; 
-`;*/
-
 
 const Ug = () => {
 
@@ -37,8 +17,7 @@ const Ug = () => {
   }
 
   return (
-    <Content>
-      <h3>Untergeschoss</h3>
+    <>
       <FsLightbox
         toggler={lightboxController.toggler}
         sources={[]}
@@ -46,7 +25,7 @@ const Ug = () => {
       />
 
       <Plan level="ug" openLightboxOnSlide={openLightboxOnSlide} />
-    </Content>
+    </>
   );
 };
 

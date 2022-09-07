@@ -1,8 +1,10 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useContext } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import images from "./images";
 import styled from 'styled-components';
+import translations from "../../common/translations";
+import { LanguageContext } from '../../../hooks/useStore';
 
 const Container = styled.div`
   display: flex;
@@ -90,6 +92,13 @@ const Photos = () => {
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const [opened, setOpened] = useState('');
 
+  const { language, dispatch } = useContext(LanguageContext);
+  if(!language || !dispatch) {
+    return <></>;
+  }
+
+  const t = v => translations(v,language);
+
   const openLightbox = useCallback((event, { photo, index }, gal) => {
     setOpened(gal)
     setCurrentImage(index);
@@ -103,23 +112,23 @@ const Photos = () => {
 
   return (
     <Container>
-      <h3>Erdgeschoss</h3>
+      <h3>{t('eg')}</h3>
       <SGallery1>
         <Gallery photos={images.eg} onClick={(e, { index }) => openLightbox(e, { index }, 'eg')} />
       </SGallery1>
-      <h3>Obergeschoss</h3>
+      <h3>{t('og')}</h3>
       <SGallery2>
         <Gallery photos={images.og} onClick={(e, { index }) => openLightbox(e, { index }, 'og')} />
       </SGallery2>
-      <h3>Dachgeschoss</h3>
+      <h3>{t('dg')}</h3>
       <SGallery3>
         <Gallery photos={images.dg} onClick={(e, { index }) => openLightbox(e, { index }, 'dg')} />
       </SGallery3>
-      <h3>Untergeschoss</h3>
+      <h3>{t('ug')}</h3>
       <SGallery4>
         <Gallery photos={images.ug} onClick={(e, { index }) => openLightbox(e, { index }, 'ug')} />
       </SGallery4>
-      <h3>Aussen</h3>
+      <h3>{t('sg')}</h3>
       <SGallery5>
         <Gallery photos={images.outside} onClick={(e, { index }) => openLightbox(e, { index }, 'outside')} />
       </SGallery5>

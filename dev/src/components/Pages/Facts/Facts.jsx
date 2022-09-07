@@ -92,50 +92,45 @@ const Facts = () => {
   if(!language || !dispatch) {
     return <></>;
   }
+
+  const t = v => translations(v,language);
+
   return (
     <Container>
       <Content>
-        <h3>{translations('keydata', language)}</h3>
+        <h3>{t('keydata')}</h3>
         <Dl>
-          <Dt>Verfügbar ab</Dt>   <Dd>November 2022</Dd>
-          <Dt>Zimmer</Dt>   <Dd>6.5</Dd>
-          <Dt>Badezimmer</Dt>   <Dd>3</Dd>
-          <Dt>Baujahr</Dt>   <Dd>1979</Dd>
-          <Dt>Letzte Renovation</Dt>   <Dd>2021</Dd>
-          <Dt>Wärmeerzeugung</Dt>   <Dd>Ölheizung</Dd>
-          <Dt>Wärmeverteilung</Dt>   <Dd>Radiatoren</Dd>
+          <Dt>{t('available')}</Dt>   <Dd>November 2022</Dd>
+          <Dt>{t('rooms')}</Dt>   <Dd>6.5</Dd>
+          <Dt>{t('bathroom')}</Dt>   <Dd>3</Dd>
+          <Dt>{t('year')}</Dt>   <Dd>1979</Dd>
+          <Dt>{t('renovation')}</Dt>   <Dd>2021</Dd>
+          <Dt>{t('heating')}</Dt>   <Dd>{t('heatingv')}</Dd>
+          <Dt>{t('heatdistribution')}</Dt>   <Dd>{t('heatdistributionv')}</Dd>
         </Dl>
-        <h3>Angebot</h3>
+        <h3>{t('offer')}</h3>
         <Dl>
-          <Dt>Verkaufspreis</Dt>   <Dd>CHF 1'450'000.-</Dd>
+          <Dt>{t('price')}</Dt>   <Dd>{t('pricev')}</Dd>
         </Dl>
       </Content>
       <Content>
-        <h3>Flachen</h3>
+        <h3>{t('surface')}</h3>
         <Dl>
-          <Dt>Nettowohnfläche</Dt>   <Dd>168m²</Dd>
-          <Dt>Grundstücksfläche</Dt>   <Dd>218m²</Dd>
-          <Dt>Gesamtnutzfläche</Dt>   <Dd>220m²</Dd>
-          <Dt>Gebäudevolumen</Dt>   <Dd>678m³</Dd>
+          <Dt>{t('space')}</Dt>   <Dd>168m²</Dd>
+          <Dt>{t('land')}</Dt>   <Dd>218m²</Dd>
+          <Dt>{t('landsum')}</Dt>   <Dd>220m²</Dd>
+          <Dt>{t('volume')}</Dt>   <Dd>678m³</Dd>
         </Dl>
-        <h3>Eigenschaften</h3>
+        <h3>{t('character')}</h3>
         <EContainer>
           <Content>
             <Ul>
-              <li>Komplett saniert</li>
-              <li>Ruhig</li>
-              <li>Schule und Kindergarten</li>
-              <li>Kinderfreundlich</li>
-              <li>Sonnig</li>
+            {t('characteristics1')}
             </Ul>
           </Content>
           <Content>
             <Ul>
-              <li>Privatweg</li>
-              <li>Sportanlagen</li>
-              <li>Haustiere erlaubt</li>
-              <li>Verkehrsverbindung</li>
-              <li>Freibad</li>
+            {t('characteristics2')}
             </Ul>
           </Content>
         </EContainer>

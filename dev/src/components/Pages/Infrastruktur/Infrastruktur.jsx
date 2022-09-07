@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import schule from '../../../assets/umgebung/schule.jpg'
 import einkauf from '../../../assets/umgebung/einkauf.jpg'
 import ov from '../../../assets/umgebung/ov.jpg'
@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import { MdOutlineDirectionsBike } from "react-icons/md";
 import { BiWalk, BiBus } from "react-icons/bi"; 
 import { FaCarAlt } from "react-icons/fa"; 
+import translations from "../../common/translations";
+import { LanguageContext } from '../../../hooks/useStore';
 
 const MapContainer = styled.div`
   width: 100%;
@@ -46,6 +48,9 @@ const PrintFlex = styled.div`
 const Container = styled.div`
   width: calc(100% - 40px);
   padding: 0 20px;
+  h3 {
+    margin-top: 35px;
+  }
 `;
 
 const Dl = styled.dl`
@@ -116,20 +121,26 @@ const Ddt = styled(Dd)`
 `;
 
 const Infrastruktur = () => {
+  const { language, dispatch } = useContext(LanguageContext);
+  if(!language || !dispatch) {
+    return <></>;
+  }
+
+  const t = v => translations(v,language);
   return (<Container>
-    <h3>Schule und Kindergarten</h3>
+    <h3>{t('school')}</h3>
     <MapContainer>
       <Image src={schule} />
     </MapContainer>
     <Dl>
       <Dtt></Dtt>   <Ddt><BiWalk /></Ddt> <Ddt><MdOutlineDirectionsBike /></Ddt>
-      <Dt>Primarschule Stigeli<br /><span>180m</span></Dt>   <Dd>2 min</Dd> <Dd>1 min</Dd>
-      <Dt>Kindergarten Semper<br /><span>220m</span></Dt>   <Dd>2 min</Dd> <Dd>1 min</Dd>
-      <Dt>Primarschule Butzen<br /><span>260m</span></Dt>   <Dd>4 min</Dd> <Dd>1.5 min</Dd>
-      <Dt>Kindergarten Spittel<br /><span>300m</span></Dt>   <Dd>3 min</Dd> <Dd>1 min</Dd>
-      <Dt1>Sekundarschule<br /><span>1.2km</span></Dt1>   <Dd1>13 min</Dd1><Dd1>4 min</Dd1>
+      <Dt>{t('primary')} Stigeli<br /><span>180m</span></Dt>   <Dd>2 min</Dd> <Dd>1 min</Dd>
+      <Dt>{t('nursery')} Semper<br /><span>220m</span></Dt>   <Dd>2 min</Dd> <Dd>1 min</Dd>
+      <Dt>{t('primary')} Butzen<br /><span>260m</span></Dt>   <Dd>4 min</Dd> <Dd>1.5 min</Dd>
+      <Dt>{t('nursery')} Spittel<br /><span>300m</span></Dt>   <Dd>3 min</Dd> <Dd>1 min</Dd>
+      <Dt1>{t('secondary')}<br /><span>1.2km</span></Dt1>   <Dd1>13 min</Dd1><Dd1>4 min</Dd1>
     </Dl>
-    <h3>Einkaufsmöglichkeiten</h3>
+    <h3>{t('shopping')}</h3>
     <PrintFlex>
       <MapContainer>
         <Image src={einkauf} />
@@ -145,7 +156,7 @@ const Infrastruktur = () => {
         <Dt>Obi / Pfister<br /><span>1.8km</span></Dt>   <Dd>6 min</Dd><Dd>22 min</Dd>
       </Dl>
     </PrintFlex>
-    <h3>Öffentliche Verkher</h3>
+    <h3>{t('transport')}</h3>
     <PrintFlex>
       <MapContainer>
         <Image id="ov" src={ov} />
@@ -154,8 +165,8 @@ const Infrastruktur = () => {
         <Dtt></Dtt>   <Ddt><BiBus /> / <FaCarAlt /></Ddt> <Ddt><BiWalk /></Ddt>
         <Dt>Bus 200<br /><span>350m</span></Dt>   <Dd></Dd> <Dd>4 min</Dd>
         <Dt>Bus 225<br /><span>500m</span></Dt>   <Dd></Dd> <Dd>1 min</Dd>
-        <Dt>Zug S14 / S5<br /><span>1.2km</span></Dt>   <Dd>7 min</Dd> <Dd>15min</Dd>
-        <Dt>Autobahn<br /><span>2.1km</span></Dt>   <Dd>5 min</Dd> <Dd></Dd>
+        <Dt>{t('train')} S14 / S5<br /><span>1.2km</span></Dt>   <Dd>7 min</Dd> <Dd>15min</Dd>
+        <Dt>{t('motorway')}<br /><span>2.1km</span></Dt>   <Dd>5 min</Dd> <Dd></Dd>
       </Dl>
     </PrintFlex>
     </Container>

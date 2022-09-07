@@ -141,6 +141,23 @@ const PFact = styled(Fact)`
   }
 `
 
+const PArt = styled.article`
+  @media print {
+    display: none;
+  }
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 20px;
+  a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background: #6a6;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+`
+
 const H2 = styled.h2`
   @media print {
     text-align: center;
@@ -174,14 +191,18 @@ const Home = () => {
   if(!language) {
     return <></>;
   }
+  const t = v => translations(v,language);
 
   return (
     <>
       <Content>
         <Image><img alt="Reihenfamilienhaus am famielienfreundlichen und ruhigen Erlenweg" src={share} /></Image>
-        <H2>{translations('h2', language)}</H2>
+        <H2>{t('h2')}</H2>
         <MainArticle itemscope itemtype="https://schema.org/Offer">
-        <p>{translations('header', language)}</p>
+        <p>{t('header')}</p>
+        <PArt>
+           <a href={`./${t('doclink')}.pdf`} target="_blank">&raquo; {t('docs')} &laquo;</a>
+        </PArt>
         </MainArticle>
         <Facts>
           <Fact>
@@ -189,8 +210,8 @@ const Home = () => {
               <MdOutlinePlace />
             </FactImage>
             <div>
-            <h3>{translations('address', language)}</h3>
-            <p>{translations('addressv', language)}</p>
+            <h3>{t('address')}</h3>
+            <p>{t('addressv')}</p>
             </div>
           </Fact>
           <PFact>
@@ -198,8 +219,8 @@ const Home = () => {
               <BsHouse />
             </FactImage>
             <div>
-            <h3>{translations('object', language)}</h3>
-            <p>{translations('objectv', language)}</p>
+            <h3>{t('object')}</h3>
+            <p>{t('objectv')}</p>
             </div>
           </PFact>
           <Fact>
@@ -207,8 +228,8 @@ const Home = () => {
               <BsPiggyBank />
             </FactImage>
             <div>
-            <h3>{translations('price', language)}</h3>
-            <p>{translations('pricev', language)}</p>
+            <h3>{t('price')}</h3>
+            <p>{t('pricev')}</p>
             </div>
           </Fact>
           <Fact>
@@ -216,7 +237,7 @@ const Home = () => {
               <HiOutlineCalendar />
             </FactImage>
             <div>
-            <h3>{translations('available', language)}</h3>
+            <h3>{t('available')}</h3>
             <p>November 2022</p>
             </div>
           </Fact>
@@ -228,7 +249,7 @@ const Home = () => {
               </FloorPlan>
             </FactImage>
             <div>
-            <h3>{translations('space', language)}</h3>
+            <h3>{t('space')}</h3>
             <p>168 m²</p>
             </div>
           </Fact>
@@ -237,7 +258,7 @@ const Home = () => {
               <BsDoorClosed />
             </FactImage>
             <div>
-            <h3>{translations('rooms', language)}</h3>
+            <h3>{t('rooms')}</h3>
             <p>6.5</p>
             </div>
           </Fact>
@@ -246,7 +267,7 @@ const Home = () => {
               <FiFlag />
             </FactImage>
             <div>
-            <h3>{translations('year', language)}</h3>
+            <h3>{t('year')}</h3>
             <p>1979</p>
             </div>
           </Fact>
@@ -257,7 +278,7 @@ const Home = () => {
               </Renovation>
             </FactImage>
             <div>
-            <h3>{translations('renovation', language)}</h3>
+            <h3>{t('renovation')}</h3>
             <p>2021</p>
             </div>
           </Fact>
@@ -268,7 +289,7 @@ const Home = () => {
               </Fence>
             </FactImage>
             <div>
-            <h3>{translations('land', language)}</h3>
+            <h3>{t('land')}</h3>
             <p>218 m²</p>
             </div>
           </Fact>

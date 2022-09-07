@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import Plan from './Plan';
-import styled from 'styled-components';
 import FsLightbox from 'fslightbox-react';
 import { getSource, getSrc } from '../../common/vr';
-
-const Content = styled.div`
-  padding: 10px;
-  h3 span {
-    @media print {
-      display: none;
-    }
-  }
-`;
 
 const Dg = () => {
   const [lightboxController, setLightboxController] = useState({
@@ -34,15 +24,15 @@ const Dg = () => {
   ]
 
   return (
-    <Content>
-      <h3>Dachgeschoss<span> - Virtuelle Besichtigung</span></h3>
+    <>
+      
       <FsLightbox
         toggler={lightboxController.toggler}
         sources={sources}
         slide={lightboxController.slide}
       />
       <Plan level="dg" openLightboxOnSlide={openLightboxOnSlide} />
-    </Content>
+    </>
   );
 };
 
