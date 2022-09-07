@@ -138,7 +138,7 @@ const Infrastruktur = () => {
       <Dt>{t('nursery')} Semper<br /><span>220m</span></Dt>   <Dd>2 min</Dd> <Dd>1 min</Dd>
       <Dt>{t('primary')} Butzen<br /><span>260m</span></Dt>   <Dd>4 min</Dd> <Dd>1.5 min</Dd>
       <Dt>{t('nursery')} Spittel<br /><span>300m</span></Dt>   <Dd>3 min</Dd> <Dd>1 min</Dd>
-      <Dt1>{t('secondary')}<br /><span>1.2km</span></Dt1>   <Dd1>13 min</Dd1><Dd1>4 min</Dd1>
+      <Dt1>{t('secondary')}<br /><span>1200m</span></Dt1>   <Dd1>13 min</Dd1><Dd1>4 min</Dd1>
     </Dl>
     <h3>{t('shopping')}</h3>
     <PrintFlex>
@@ -149,11 +149,11 @@ const Infrastruktur = () => {
         <Dtt></Dtt>   <Ddt><FaCarAlt /></Ddt> <Ddt><MdOutlineDirectionsBike /></Ddt>
         <Dt>Lidl / Migros<br /><span>500m</span></Dt>   <Dd>2 min</Dd> <Dd>7 min</Dd>
         <Dt>Denner<br /><span>500m</span></Dt>   <Dd>2 min</Dd> <Dd>7 min</Dd>
-        <Dt>Coop Supermarkt<br /><span>1.2km</span></Dt>   <Dd>3 min</Dd> <Dd>16min</Dd>
-        <Dt>Conforama<br /><span>1.2km</span></Dt>   <Dd>3 min</Dd> <Dd>16 min</Dd>
-        <Dt>Manor / Jumbo<br /><span>1.6km</span></Dt>   <Dd>5 min</Dd><Dd>21 min</Dd>
-        <Dt>Hornbach<br /><span>1.9km</span></Dt>   <Dd>6 min</Dd><Dd>24 min</Dd>
-        <Dt>Obi / Pfister<br /><span>1.8km</span></Dt>   <Dd>6 min</Dd><Dd>22 min</Dd>
+        <Dt>Coop Supermarkt<br /><span>1200m</span></Dt>   <Dd>3 min</Dd> <Dd>16min</Dd>
+        <Dt>Conforama<br /><span>1200m</span></Dt>   <Dd>3 min</Dd> <Dd>16 min</Dd>
+        <Dt>Manor / Jumbo<br /><span>1600m</span></Dt>   <Dd>5 min</Dd><Dd>21 min</Dd>
+        <Dt>Hornbach<br /><span>1900m</span></Dt>   <Dd>6 min</Dd><Dd>24 min</Dd>
+        <Dt>Obi / Pfister<br /><span>1800m</span></Dt>   <Dd>6 min</Dd><Dd>22 min</Dd>
       </Dl>
     </PrintFlex>
     <h3>{t('transport')}</h3>
@@ -164,9 +164,9 @@ const Infrastruktur = () => {
       <Dl>
         <Dtt></Dtt>   <Ddt><BiBus /> / <FaCarAlt /></Ddt> <Ddt><BiWalk /></Ddt>
         <Dt>Bus 200<br /><span>350m</span></Dt>   <Dd></Dd> <Dd>4 min</Dd>
-        <Dt>Bus 225<br /><span>500m</span></Dt>   <Dd></Dd> <Dd>1 min</Dd>
-        <Dt>{t('train')} S14 / S5<br /><span>1.2km</span></Dt>   <Dd>7 min</Dd> <Dd>15min</Dd>
-        <Dt>{t('motorway')}<br /><span>2.1km</span></Dt>   <Dd>5 min</Dd> <Dd></Dd>
+        <Dt>Bus 225<br /><span>100m</span></Dt>   <Dd></Dd> <Dd>1 min</Dd>
+        <Dt>{t('train')} S14 / S5<br /><span>1200m</span></Dt>   <Dd>7 min</Dd> <Dd>15min</Dd>
+        <Dt>{t('motorway')}<br /><span>2000m</span></Dt>   <Dd>5 min</Dd> <Dd></Dd>
       </Dl>
     </PrintFlex>
     </Container>
